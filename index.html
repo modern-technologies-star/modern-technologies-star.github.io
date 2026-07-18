@@ -1518,6 +1518,509 @@
                 transform: none;
             }
         }
+
+
+        /* =========================================================
+           LIQUID GLASS THEME
+           Layered translucent surfaces, soft refraction and aurora light.
+           ========================================================= */
+        :root {
+            --bg: #06111f;
+            --bg-2: #0a1830;
+            --surface: rgba(255, 255, 255, 0.075);
+            --surface-2: rgba(255, 255, 255, 0.115);
+            --surface-3: rgba(9, 24, 46, 0.64);
+            --border: rgba(255, 255, 255, 0.18);
+            --border-strong: rgba(180, 244, 255, 0.42);
+            --text: #f7fbff;
+            --muted: #bac8da;
+            --muted-2: #91a4bd;
+            --cyan: #8cecff;
+            --blue: #7aa7ff;
+            --purple: #b79cff;
+            --green: #70efb2;
+            --shadow: 0 36px 100px rgba(0, 8, 30, 0.45);
+            --shadow-soft: 0 18px 55px rgba(0, 8, 30, 0.28);
+            --glass-highlight: inset 0 1px 0 rgba(255,255,255,0.38), inset 0 -1px 0 rgba(255,255,255,0.05);
+        }
+
+        body {
+            background:
+                radial-gradient(circle at 12% 10%, rgba(89, 205, 255, 0.32), transparent 27%),
+                radial-gradient(circle at 87% 8%, rgba(158, 112, 255, 0.29), transparent 25%),
+                radial-gradient(circle at 73% 68%, rgba(68, 238, 198, 0.19), transparent 30%),
+                radial-gradient(circle at 22% 82%, rgba(70, 116, 255, 0.22), transparent 30%),
+                linear-gradient(150deg, #031023 0%, #092444 42%, #0a1731 72%, #050d1c 100%);
+            background-attachment: fixed;
+        }
+
+        body::before {
+            opacity: 0.28;
+            background-image:
+                linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+            background-size: 54px 54px;
+            mask-image: radial-gradient(circle at center, black, transparent 84%);
+        }
+
+        body::after {
+            position: fixed;
+            z-index: -2;
+            inset: -20%;
+            pointer-events: none;
+            content: "";
+            background:
+                radial-gradient(circle at 22% 30%, rgba(88, 226, 255, 0.19), transparent 18%),
+                radial-gradient(circle at 73% 28%, rgba(176, 117, 255, 0.18), transparent 20%),
+                radial-gradient(circle at 58% 78%, rgba(90, 242, 194, 0.12), transparent 20%);
+            filter: blur(42px);
+            animation: liquidAurora 18s ease-in-out infinite alternate;
+        }
+
+        @keyframes liquidAurora {
+            0% { transform: translate3d(-2%, -1%, 0) scale(1); }
+            50% { transform: translate3d(3%, 2%, 0) scale(1.05); }
+            100% { transform: translate3d(-1%, 4%, 0) scale(0.98); }
+        }
+
+        .site-header {
+            padding: 10px 0;
+        }
+
+        .site-header.scrolled .nav-wrap,
+        .site-header:not(.scrolled) .nav-wrap {
+            padding: 0 18px;
+            border: 1px solid rgba(255,255,255,0.13);
+            border-radius: 24px;
+            background: linear-gradient(135deg, rgba(255,255,255,0.13), rgba(255,255,255,0.055));
+            box-shadow: var(--glass-highlight), 0 18px 50px rgba(1, 9, 28, 0.22);
+            backdrop-filter: blur(28px) saturate(155%);
+            -webkit-backdrop-filter: blur(28px) saturate(155%);
+        }
+
+        .site-header.scrolled {
+            border: 0;
+            background: transparent;
+            box-shadow: none;
+            backdrop-filter: none;
+        }
+
+        .brand-mark,
+        .button,
+        .menu-button,
+        .filter-button,
+        .back-to-top {
+            box-shadow: var(--glass-highlight), 0 14px 34px rgba(2, 10, 31, 0.20);
+        }
+
+        .brand-mark {
+            border-color: rgba(255,255,255,0.28);
+            background:
+                radial-gradient(circle at 25% 15%, rgba(255,255,255,0.72), transparent 26%),
+                linear-gradient(145deg, rgba(84,196,255,0.92), rgba(102,105,238,0.88) 55%, rgba(181,111,255,0.9));
+        }
+
+        .button-primary {
+            color: #061225;
+            border-color: rgba(255,255,255,0.45);
+            background:
+                radial-gradient(circle at 25% 10%, rgba(255,255,255,0.9), transparent 34%),
+                linear-gradient(135deg, rgba(189,249,255,0.98), rgba(119,218,255,0.94) 48%, rgba(156,176,255,0.95));
+        }
+
+        .button-secondary,
+        .button-whatsapp {
+            border-color: rgba(255,255,255,0.22);
+            background: linear-gradient(135deg, rgba(255,255,255,0.16), rgba(255,255,255,0.065));
+            backdrop-filter: blur(22px) saturate(150%);
+            -webkit-backdrop-filter: blur(22px) saturate(150%);
+        }
+
+        .button-secondary:hover {
+            background: linear-gradient(135deg, rgba(255,255,255,0.22), rgba(255,255,255,0.1));
+        }
+
+        .button-whatsapp {
+            color: #eafff4;
+            border-color: rgba(112,239,178,0.36);
+            background:
+                radial-gradient(circle at 20% 5%, rgba(255,255,255,0.28), transparent 32%),
+                linear-gradient(135deg, rgba(41,192,113,0.34), rgba(38,132,93,0.18));
+        }
+
+        .button-whatsapp:hover {
+            border-color: rgba(112,239,178,0.58);
+            background: linear-gradient(135deg, rgba(41,192,113,0.48), rgba(38,132,93,0.25));
+        }
+
+        .hero-stage,
+        .device-card,
+        .float-card,
+        .metrics-bar,
+        .account-card,
+        .search-input,
+        .filter-button,
+        .game-card,
+        .story-visual,
+        .timeline,
+        .capability,
+        .contact-card,
+        .glass-panel,
+        .back-to-top {
+            border-color: rgba(255,255,255,0.18);
+            background:
+                radial-gradient(circle at 12% 5%, rgba(255,255,255,0.22), transparent 28%),
+                linear-gradient(145deg, rgba(255,255,255,0.125), rgba(255,255,255,0.045));
+            box-shadow: var(--glass-highlight), var(--shadow-soft);
+            backdrop-filter: blur(26px) saturate(155%);
+            -webkit-backdrop-filter: blur(26px) saturate(155%);
+        }
+
+        .metrics-bar {
+            width: min(calc(100% - 40px), var(--container));
+            margin-inline: auto;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.17);
+            border-radius: 28px;
+        }
+
+        .metric + .metric {
+            border-left-color: rgba(255,255,255,0.14);
+        }
+
+        .account-card::after,
+        .game-card::after,
+        .glass-panel::after {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            content: "";
+            border-radius: inherit;
+            background: linear-gradient(115deg, rgba(255,255,255,0.18), transparent 30%, transparent 68%, rgba(255,255,255,0.05));
+            opacity: 0.65;
+        }
+
+        .account-card > *,
+        .game-card > *,
+        .glass-panel > * {
+            position: relative;
+            z-index: 2;
+        }
+
+        .game-card:hover,
+        .account-card:hover {
+            border-color: rgba(190,244,255,0.44);
+            box-shadow: var(--glass-highlight), 0 28px 75px rgba(1, 12, 38, 0.38);
+        }
+
+        .search-input {
+            color: white;
+        }
+
+        .filter-button.active,
+        .filter-button:hover {
+            color: #071426;
+            border-color: rgba(255,255,255,0.5);
+            background:
+                radial-gradient(circle at 25% 5%, white, transparent 32%),
+                linear-gradient(135deg, #baf5ff, #91c9ff);
+        }
+
+        .game-visual {
+            background:
+                radial-gradient(circle at 76% 18%, rgba(136,236,255,0.42), transparent 29%),
+                radial-gradient(circle at 14% 82%, rgba(183,156,255,0.36), transparent 34%),
+                linear-gradient(145deg, rgba(15,42,76,0.96), rgba(31,49,91,0.92));
+        }
+
+        .game-icon-shell {
+            border-color: rgba(255,255,255,0.73);
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.5), 0 24px 58px rgba(0,7,27,0.46);
+        }
+
+        .contact-section {
+            overflow: hidden;
+        }
+
+        .contact-section::before,
+        .contact-section::after {
+            position: absolute;
+            pointer-events: none;
+            content: "";
+            border-radius: 999px;
+            filter: blur(12px);
+        }
+
+        .contact-section::before {
+            top: 6%;
+            right: -8%;
+            width: 420px;
+            height: 420px;
+            background: radial-gradient(circle, rgba(104,227,255,0.23), transparent 68%);
+        }
+
+        .contact-section::after {
+            bottom: -10%;
+            left: -8%;
+            width: 380px;
+            height: 380px;
+            background: radial-gradient(circle, rgba(176,128,255,0.20), transparent 68%);
+        }
+
+        .contact-shell {
+            display: grid;
+            grid-template-columns: minmax(0, 1.25fr) minmax(320px, 0.75fr);
+            gap: 22px;
+            align-items: stretch;
+        }
+
+        .glass-panel {
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 36px;
+        }
+
+        .project-inquiry {
+            padding: 58px;
+        }
+
+        .project-inquiry h2 {
+            max-width: 820px;
+        }
+
+        .contact-lead {
+            max-width: 760px;
+            font-size: 1.02rem;
+        }
+
+        .availability-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            margin-bottom: 24px;
+            padding: 8px 13px;
+            border: 1px solid rgba(112,239,178,0.28);
+            border-radius: 999px;
+            color: #c8ffe3;
+            background: rgba(52,196,125,0.1);
+            font-size: 0.77rem;
+            font-weight: 800;
+            letter-spacing: 0.02em;
+        }
+
+        .availability-pill span {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--green);
+            box-shadow: 0 0 16px rgba(112,239,178,0.82);
+            animation: availabilityPulse 2.2s ease-in-out infinite;
+        }
+
+        @keyframes availabilityPulse {
+            50% { transform: scale(1.35); opacity: 0.72; }
+        }
+
+        .project-services {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 28px 0 31px;
+        }
+
+        .project-services span {
+            padding: 9px 13px;
+            border: 1px solid rgba(255,255,255,0.16);
+            border-radius: 999px;
+            color: #deebf8;
+            background: rgba(255,255,255,0.07);
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.18);
+            font-size: 0.78rem;
+            font-weight: 740;
+        }
+
+        .project-inquiry .contact-actions {
+            justify-content: flex-start;
+        }
+
+        .contact-directory {
+            display: flex;
+            flex-direction: column;
+            padding: 34px;
+        }
+
+        .directory-label {
+            display: inline-flex;
+            width: fit-content;
+            margin-bottom: 18px;
+            padding: 7px 11px;
+            border: 1px solid rgba(255,255,255,0.16);
+            border-radius: 999px;
+            color: var(--cyan);
+            background: rgba(255,255,255,0.055);
+            font-size: 0.71rem;
+            font-weight: 850;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .contact-directory-head h3 {
+            margin-bottom: 10px;
+            font-size: 1.65rem;
+        }
+
+        .contact-directory-head p {
+            font-size: 0.9rem;
+        }
+
+        .contact-methods {
+            display: grid;
+            gap: 11px;
+            margin-top: 26px;
+        }
+
+        .contact-method {
+            display: grid;
+            grid-template-columns: 46px minmax(0, 1fr);
+            align-items: center;
+            gap: 13px;
+            padding: 13px;
+            border: 1px solid rgba(255,255,255,0.13);
+            border-radius: 18px;
+            background: linear-gradient(135deg, rgba(255,255,255,0.095), rgba(255,255,255,0.035));
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.15);
+            transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+        }
+
+        .contact-method:hover {
+            transform: translateX(4px);
+            border-color: rgba(166,235,255,0.4);
+            background: linear-gradient(135deg, rgba(255,255,255,0.15), rgba(255,255,255,0.055));
+        }
+
+        .contact-icon {
+            display: grid;
+            width: 46px;
+            height: 46px;
+            place-items: center;
+            border: 1px solid rgba(255,255,255,0.19);
+            border-radius: 15px;
+            color: var(--cyan);
+            background: rgba(126,213,255,0.11);
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.24);
+        }
+
+        .contact-icon svg {
+            width: 23px;
+            height: 23px;
+        }
+
+        .whatsapp-icon {
+            color: var(--green);
+            background: rgba(77,219,142,0.1);
+        }
+
+        .contact-method small,
+        .contact-method strong {
+            display: block;
+            overflow-wrap: anywhere;
+        }
+
+        .contact-method small {
+            margin-bottom: 1px;
+            color: var(--muted-2);
+            font-size: 0.68rem;
+            font-weight: 800;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .contact-method strong {
+            color: white;
+            font-size: 0.87rem;
+        }
+
+        .response-note {
+            display: flex;
+            gap: 9px;
+            margin-top: auto;
+            padding-top: 24px;
+            color: var(--muted);
+            font-size: 0.78rem;
+            line-height: 1.5;
+        }
+
+        .response-note span {
+            flex: 0 0 auto;
+            color: var(--cyan);
+        }
+
+        .footer {
+            width: min(calc(100% - 40px), var(--container));
+            margin: 0 auto 18px;
+            padding: 26px 24px;
+            border: 1px solid rgba(255,255,255,0.14);
+            border-radius: 24px;
+            background: linear-gradient(135deg, rgba(255,255,255,0.09), rgba(255,255,255,0.035));
+            box-shadow: var(--glass-highlight), var(--shadow-soft);
+            backdrop-filter: blur(24px) saturate(150%);
+            -webkit-backdrop-filter: blur(24px) saturate(150%);
+        }
+
+        @media (max-width: 980px) {
+            .contact-shell {
+                grid-template-columns: 1fr;
+            }
+
+            .response-note {
+                margin-top: 24px;
+            }
+        }
+
+        @media (max-width: 760px) {
+            .site-header.scrolled .nav-wrap,
+            .site-header:not(.scrolled) .nav-wrap {
+                padding: 0 12px;
+                border-radius: 20px;
+            }
+
+            .metrics-bar,
+            .footer {
+                width: min(calc(100% - 28px), var(--container));
+            }
+
+            .project-inquiry,
+            .contact-directory {
+                padding: 30px 22px;
+            }
+
+            .project-inquiry .contact-actions {
+                align-items: stretch;
+            }
+
+            .project-inquiry .contact-actions .button {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .contact-method {
+                grid-template-columns: 42px minmax(0, 1fr);
+                padding: 11px;
+            }
+
+            .contact-icon {
+                width: 42px;
+                height: 42px;
+            }
+
+            .project-services span {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
     </style>
 
     <script type="application/ld+json">
@@ -1528,10 +2031,18 @@
         "url": "https://modern-technologies-star.github.io/",
         "description": "Independent mobile games and apps company with 10+ years of industry experience, working since 2016 and publishing on Google Play since 2018.",
         "foundingDate": "2016",
-        "email": "simulation.gaming.studio@gmail.com",
+        "email": "modern-technologies@outlook.com",
+        "telephone": "+92-306-7770399",
         "sameAs": [
-            "https://github.com/modern-technologies-star"
-        ]
+            "https://github.com/GameDevelopment2022"
+        ],
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "sales and project inquiries",
+            "email": "modern-technologies@outlook.com",
+            "telephone": "+92-306-7770399",
+            "availableLanguage": ["English", "Urdu"]
+        }
     }
     </script>
 </head>
@@ -1563,9 +2074,9 @@
 
             <a
                 class="button button-primary desktop-cta"
-                href="#portfolio"
+                href="#contact"
             >
-                View Portfolio
+                Start a Project
             </a>
 
             <button
@@ -1611,11 +2122,9 @@
 
                         <a
                             class="button button-secondary"
-                            href="https://github.com/modern-technologies-star"
-                            target="_blank"
-                            rel="noopener noreferrer"
+                            href="#contact"
                         >
-                            GitHub Profile
+                            Start a Custom Project
                         </a>
                     </div>
 
@@ -1911,40 +2420,137 @@
             </div>
         </section>
 
-        <section id="contact">
+        <section id="contact" class="contact-section">
             <div class="container">
-                <div class="contact-card reveal">
-                    <span class="eyebrow">Contact Modern Technologies</span>
-                    <h2>
-                        Let’s build the next
-                        <span class="gradient-text">engaging mobile experience.</span>
-                    </h2>
-                    <p>
-                        Contact us regarding our games, apps, technical support, publishing,
-                        partnerships or business opportunities.
-                    </p>
+                <div class="contact-shell reveal">
+                    <div class="project-inquiry glass-panel">
+                        <div class="availability-pill">
+                            <span></span>
+                            Available for selected custom projects
+                        </div>
 
-                    <div class="contact-actions">
-                        <a
-                            class="button button-primary"
-                            href="mailto:simulation.gaming.studio@gmail.com"
-                        >
-                            Email Us
-                            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                                <path d="M4 6H20V18H4V6Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-                                <path d="M4 7L12 13L20 7" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-                            </svg>
-                        </a>
+                        <span class="eyebrow">Custom Game & App Development</span>
+                        <h2>
+                            Bring your idea to life with
+                            <span class="gradient-text">Modern Technologies.</span>
+                        </h2>
+                        <p class="contact-lead">
+                            Need a custom mobile game, Android app, Unity prototype, existing-project
+                            upgrade, monetization integration or store-ready release? We can help turn
+                            your concept into a polished, scalable product—from planning and development
+                            to testing, optimization and publishing support.
+                        </p>
 
-                        <a
-                            class="button button-secondary"
-                            href="https://github.com/modern-technologies-star"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            Visit GitHub
-                        </a>
+                        <div class="project-services" aria-label="Custom project services">
+                            <span>Custom Mobile Games</span>
+                            <span>Android Applications</span>
+                            <span>Unity Development</span>
+                            <span>Project Reskinning & Upgrades</span>
+                            <span>Ads, Analytics & Backend</span>
+                            <span>Google Play Publishing Support</span>
+                        </div>
+
+                        <div class="contact-actions">
+                            <a
+                                class="button button-primary"
+                                href="mailto:modern-technologies@outlook.com?subject=Custom%20Project%20Inquiry&amp;body=Hello%20Modern%20Technologies%2C%0A%0AI%20would%20like%20to%20discuss%20a%20custom%20game%20or%20app%20project.%0A%0AProject%20details%3A%0ABudget%20range%3A%0ATarget%20platform%3A%0ATimeline%3A%0A"
+                            >
+                                Request a Project Quote
+                                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                    <path d="M4 6H20V18H4V6Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                                    <path d="M4 7L12 13L20 7" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+
+                            <a
+                                class="button button-whatsapp"
+                                href="https://wa.me/923067770399?text=Hello%20Modern%20Technologies%2C%20I%20would%20like%20to%20discuss%20a%20custom%20game%20or%20app%20project."
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Chat on WhatsApp
+                                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                    <path d="M20 11.7A8 8 0 0 1 8.2 18.7L4 20L5.3 15.9A8 8 0 1 1 20 11.7Z" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/>
+                                    <path d="M8.6 8.1C8.8 10.8 11.1 13.2 13.9 13.5L15.2 12.2C15.5 11.9 16 11.8 16.4 12L18.3 12.9C18.8 13.1 19 13.6 18.9 14.1C18.6 15.5 17.3 16.4 15.8 16.4C11 16.4 7.1 12.5 7.1 7.7C7.1 6.2 8 4.9 9.4 4.6C9.9 4.5 10.4 4.7 10.6 5.2L11.5 7.1C11.7 7.5 11.6 8 11.3 8.3L10 9.6" stroke="currentColor" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                        </div>
                     </div>
+
+                    <aside class="contact-directory glass-panel" aria-label="Modern Technologies contact details">
+                        <div class="contact-directory-head">
+                            <span class="directory-label">Direct Contact</span>
+                            <h3>Let’s discuss your project.</h3>
+                            <p>Share your idea, platform, target audience, approximate budget and expected timeline.</p>
+                        </div>
+
+                        <div class="contact-methods">
+                            <a class="contact-method" href="mailto:modern-technologies@outlook.com">
+                                <span class="contact-icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none">
+                                        <path d="M3.5 6.5H20.5V17.5H3.5V6.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                                        <path d="M4 7L12 13L20 7" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                                    </svg>
+                                </span>
+                                <span>
+                                    <small>Email</small>
+                                    <strong>modern-technologies@outlook.com</strong>
+                                </span>
+                            </a>
+
+                            <a
+                                class="contact-method"
+                                href="https://wa.me/923067770399?text=Hello%20Modern%20Technologies%2C%20I%20would%20like%20to%20discuss%20a%20project."
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <span class="contact-icon whatsapp-icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none">
+                                        <path d="M20 11.7A8 8 0 0 1 8.2 18.7L4 20L5.3 15.9A8 8 0 1 1 20 11.7Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                                        <path d="M8.7 8.2C9.2 11 11.3 13.1 14.1 13.6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                                    </svg>
+                                </span>
+                                <span>
+                                    <small>WhatsApp</small>
+                                    <strong>0306 7770399</strong>
+                                </span>
+                            </a>
+
+                            <a class="contact-method" href="tel:+923067770399">
+                                <span class="contact-icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none">
+                                        <path d="M7.1 3.8L9.4 7.8L7.8 9.4C8.8 11.7 10.7 13.6 13 14.6L14.6 13L18.6 15.3C19.1 15.6 19.4 16.2 19.2 16.8L18.6 19C18.4 19.7 17.8 20.1 17.1 20.1C9.8 20.1 3.9 14.2 3.9 6.9C3.9 6.2 4.3 5.6 5 5.4L7.2 4.8C7.8 4.6 8.4 4.9 8.7 5.4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </span>
+                                <span>
+                                    <small>Mobile</small>
+                                    <strong>0306 7770399</strong>
+                                </span>
+                            </a>
+
+                            <a
+                                class="contact-method"
+                                href="https://github.com/GameDevelopment2022"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <span class="contact-icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none">
+                                        <path d="M9 18C5.5 19 5.5 16.3 4 16M14 21V18.1C14 17.3 14.1 16.7 13.6 16.2C16.2 15.9 19 14.9 19 10.2C19 8.9 18.5 7.8 17.8 7C17.9 6.1 17.9 5.1 17.4 4.2C17.4 4.2 16.4 3.9 14.1 5.4C12.2 4.9 10.2 4.9 8.3 5.4C6 3.9 5 4.2 5 4.2C4.5 5.1 4.5 6.1 4.6 7C3.9 7.8 3.4 8.9 3.4 10.2C3.4 14.9 6.2 15.9 8.8 16.2C8.4 16.6 8.2 17.1 8.2 17.7V21" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </span>
+                                <span>
+                                    <small>GitHub</small>
+                                    <strong>GameDevelopment2022</strong>
+                                </span>
+                            </a>
+                        </div>
+
+                        <div class="response-note">
+                            <span aria-hidden="true">✦</span>
+                            For a faster estimate, include reference games/apps and the features you need.
+                        </div>
+                    </aside>
                 </div>
             </div>
         </section>
@@ -1958,9 +2564,11 @@
 
             <div class="footer-links">
                 <a href="#portfolio">Games & Apps</a>
+                <a href="#contact">Custom Projects</a>
+                <a href="https://wa.me/923067770399" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+                <a href="https://github.com/GameDevelopment2022" target="_blank" rel="noopener noreferrer">GitHub</a>
                 <a href="privacy-policy.html">Privacy Policy</a>
                 <a href="app-ads.txt">app-ads.txt</a>
-                <a href="mailto:simulation.gaming.studio@gmail.com">Contact</a>
             </div>
         </div>
     </footer>
