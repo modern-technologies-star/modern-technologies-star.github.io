@@ -2,73 +2,65 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+    <title>Modern Technologies | Mobile Games & Apps</title>
 
     <meta
         name="description"
-        content="Modern Technologies Star creates engaging mobile games, Android applications, and interactive digital experiences."
+        content="Modern Technologies is an independent mobile games and apps company with 10+ years of industry experience, developing since 2016 and publishing on Google Play since 2018."
     >
-
     <meta
         name="keywords"
-        content="Modern Technologies Star, mobile games, Android games, mobile apps, Unity games, game development"
+        content="Modern Technologies, mobile games, Android games, Unity development, game studio, Google Play publisher, mobile apps"
     >
-
-    <meta name="author" content="Modern Technologies Star">
-    <meta name="theme-color" content="#070b18">
+    <meta name="author" content="Modern Technologies">
+    <meta name="theme-color" content="#07111f">
+    <meta name="color-scheme" content="dark">
 
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Modern Technologies Star">
+    <meta property="og:title" content="Modern Technologies | Mobile Games & Apps">
     <meta
         property="og:description"
-        content="Mobile games, Android applications, and interactive digital experiences."
+        content="10+ years creating mobile games, Android apps and interactive entertainment. Publishing on Google Play since 2018."
     >
-    <meta
-        property="og:url"
-        content="https://modern-technologies-star.github.io/"
-    >
+    <meta property="og:url" content="https://modern-technologies-star.github.io/">
+    <meta property="og:site_name" content="Modern Technologies">
 
-    <title>Modern Technologies Star | Games and Apps</title>
-
-    <link
-        rel="canonical"
-        href="https://modern-technologies-star.github.io/"
-    >
+    <link rel="canonical" href="https://modern-technologies-star.github.io/">
 
     <link
         rel="icon"
-        href="data:image/svg+xml,
-        <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
-            <rect width='100' height='100' rx='22' fill='%23070b18'/>
-            <path d='M50 12L60 38L88 39L66 56L74 84L50 68L26 84L34 56L12 39L40 38Z'
-                  fill='%236d5dfc'/>
-        </svg>"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%2307111f'/%3E%3Cpath d='M18 72V28h13l19 24 19-24h13v44H68V49L50 70 32 49v23z' fill='%236ee7f9'/%3E%3C/svg%3E"
     >
 
     <style>
         :root {
-            --background: #070b18;
-            --background-soft: #0d1326;
-            --surface: rgba(255, 255, 255, 0.06);
-            --surface-strong: rgba(255, 255, 255, 0.1);
-            --border: rgba(255, 255, 255, 0.12);
-            --text: #f8f9ff;
-            --text-muted: #a9b0c7;
-            --primary: #7c6cff;
-            --primary-light: #9e93ff;
-            --secondary: #26d7c5;
-            --accent: #ffb84d;
-            --danger: #ff6b81;
-            --success: #43d17c;
-            --shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
-            --radius-small: 12px;
-            --radius-medium: 20px;
-            --radius-large: 32px;
-            --container: 1180px;
+            --bg: #050b14;
+            --bg-2: #081322;
+            --surface: rgba(255, 255, 255, 0.055);
+            --surface-2: rgba(255, 255, 255, 0.085);
+            --surface-3: rgba(6, 16, 29, 0.82);
+            --border: rgba(255, 255, 255, 0.11);
+            --border-strong: rgba(110, 231, 249, 0.28);
+            --text: #f5f8ff;
+            --muted: #a7b3c7;
+            --muted-2: #7f8ba0;
+            --cyan: #6ee7f9;
+            --blue: #6488ff;
+            --purple: #9a7cff;
+            --pink: #ff79c6;
+            --green: #62e6a7;
+            --orange: #ffb86b;
+            --danger: #ff718d;
+            --shadow: 0 30px 90px rgba(0, 0, 0, 0.42);
+            --shadow-soft: 0 16px 45px rgba(0, 0, 0, 0.25);
+            --radius-sm: 12px;
+            --radius-md: 20px;
+            --radius-lg: 30px;
+            --radius-xl: 42px;
+            --container: 1220px;
+            --header-height: 82px;
         }
 
         * {
@@ -79,12 +71,18 @@
 
         html {
             scroll-behavior: smooth;
-            scroll-padding-top: 100px;
+            scroll-padding-top: calc(var(--header-height) + 18px);
         }
 
         body {
             min-height: 100vh;
             overflow-x: hidden;
+            color: var(--text);
+            background:
+                radial-gradient(circle at 8% 5%, rgba(100, 136, 255, 0.18), transparent 28%),
+                radial-gradient(circle at 92% 12%, rgba(110, 231, 249, 0.13), transparent 24%),
+                radial-gradient(circle at 70% 75%, rgba(154, 124, 255, 0.09), transparent 30%),
+                linear-gradient(180deg, #040913 0%, #07111f 50%, #050b14 100%);
             font-family:
                 Inter,
                 ui-sans-serif,
@@ -93,29 +91,25 @@
                 BlinkMacSystemFont,
                 "Segoe UI",
                 sans-serif;
-            color: var(--text);
-            background:
-                radial-gradient(
-                    circle at 10% 10%,
-                    rgba(124, 108, 255, 0.18),
-                    transparent 30%
-                ),
-                radial-gradient(
-                    circle at 90% 20%,
-                    rgba(38, 215, 197, 0.12),
-                    transparent 28%
-                ),
-                linear-gradient(
-                    180deg,
-                    #060914 0%,
-                    #090e1e 45%,
-                    #070b18 100%
-                );
             line-height: 1.6;
         }
 
         body.menu-open {
             overflow: hidden;
+        }
+
+        body::before {
+            position: fixed;
+            z-index: -1;
+            inset: 0;
+            pointer-events: none;
+            content: "";
+            opacity: 0.32;
+            background-image:
+                linear-gradient(rgba(255,255,255,0.018) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.018) 1px, transparent 1px);
+            background-size: 42px 42px;
+            mask-image: linear-gradient(to bottom, black, transparent 88%);
         }
 
         img,
@@ -130,18 +124,17 @@
         }
 
         button,
-        input,
-        textarea {
+        input {
             font: inherit;
         }
 
         button {
-            border: 0;
+            color: inherit;
         }
 
         section {
             position: relative;
-            padding: 100px 0;
+            padding: 108px 0;
         }
 
         .container {
@@ -149,72 +142,70 @@
             margin-inline: auto;
         }
 
-        .section-heading {
-            max-width: 720px;
-            margin-bottom: 48px;
+        .section-header {
+            display: flex;
+            align-items: end;
+            justify-content: space-between;
+            gap: 36px;
+            margin-bottom: 46px;
         }
 
-        .section-heading.center {
-            margin-inline: auto;
-            text-align: center;
+        .section-copy {
+            max-width: 760px;
         }
 
         .eyebrow {
             display: inline-flex;
             align-items: center;
             gap: 10px;
-            margin-bottom: 16px;
-            color: var(--secondary);
-            font-size: 0.82rem;
-            font-weight: 800;
-            letter-spacing: 0.15em;
+            margin-bottom: 15px;
+            color: var(--cyan);
+            font-size: 0.79rem;
+            font-weight: 850;
+            letter-spacing: 0.17em;
             text-transform: uppercase;
         }
 
         .eyebrow::before {
-            width: 28px;
+            width: 29px;
             height: 2px;
             content: "";
             border-radius: 999px;
             background: currentColor;
+            box-shadow: 0 0 18px currentColor;
         }
 
         h1,
         h2,
         h3 {
-            line-height: 1.12;
+            line-height: 1.1;
+            text-wrap: balance;
         }
 
         h1 {
-            max-width: 850px;
-            font-size: clamp(3rem, 8vw, 6.4rem);
-            letter-spacing: -0.055em;
+            max-width: 900px;
+            font-size: clamp(3.2rem, 7.8vw, 6.8rem);
+            letter-spacing: -0.062em;
         }
 
         h2 {
             margin-bottom: 18px;
-            font-size: clamp(2.2rem, 5vw, 4rem);
-            letter-spacing: -0.045em;
+            font-size: clamp(2.25rem, 4.6vw, 4.2rem);
+            letter-spacing: -0.048em;
         }
 
         h3 {
-            font-size: 1.3rem;
-            letter-spacing: -0.02em;
+            font-size: 1.25rem;
+            letter-spacing: -0.025em;
         }
 
         p {
-            color: var(--text-muted);
+            color: var(--muted);
         }
 
         .gradient-text {
             color: transparent;
-            background:
-                linear-gradient(
-                    135deg,
-                    var(--primary-light),
-                    var(--secondary),
-                    #ffffff
-                );
+            background: linear-gradient(120deg, #ffffff 4%, var(--cyan) 35%, var(--blue) 68%, var(--purple));
             background-clip: text;
             -webkit-background-clip: text;
         }
@@ -228,12 +219,12 @@
             padding: 0 22px;
             border: 1px solid transparent;
             border-radius: 999px;
-            font-weight: 800;
+            font-weight: 820;
             cursor: pointer;
             transition:
                 transform 180ms ease,
-                border-color 180ms ease,
                 background 180ms ease,
+                border-color 180ms ease,
                 box-shadow 180ms ease;
         }
 
@@ -242,32 +233,27 @@
         }
 
         .button-primary {
-            color: white;
-            background:
-                linear-gradient(
-                    135deg,
-                    var(--primary),
-                    #5f4ce8
-                );
-            box-shadow: 0 15px 40px rgba(124, 108, 255, 0.3);
+            color: #06111f;
+            background: linear-gradient(135deg, #c7f9ff, var(--cyan) 45%, #8cbcff);
+            box-shadow: 0 15px 42px rgba(110, 231, 249, 0.23);
         }
 
         .button-primary:hover {
-            box-shadow: 0 20px 50px rgba(124, 108, 255, 0.42);
+            box-shadow: 0 20px 55px rgba(110, 231, 249, 0.34);
         }
 
         .button-secondary {
             border-color: var(--border);
-            background: rgba(255, 255, 255, 0.05);
+            background: rgba(255,255,255,0.05);
             backdrop-filter: blur(12px);
         }
 
         .button-secondary:hover {
-            border-color: rgba(255, 255, 255, 0.28);
-            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255,255,255,0.24);
+            background: rgba(255,255,255,0.09);
         }
 
-        .button-icon {
+        .button svg {
             width: 18px;
             height: 18px;
         }
@@ -278,80 +264,78 @@
             top: 0;
             right: 0;
             left: 0;
-            padding: 16px 0;
             transition:
-                background 200ms ease,
-                border-color 200ms ease,
-                padding 200ms ease;
+                background 180ms ease,
+                border-color 180ms ease,
+                box-shadow 180ms ease;
         }
 
         .site-header.scrolled {
-            padding: 10px 0;
             border-bottom: 1px solid var(--border);
-            background: rgba(7, 11, 24, 0.86);
-            backdrop-filter: blur(18px);
+            background: rgba(5, 11, 20, 0.84);
+            box-shadow: 0 10px 36px rgba(0,0,0,0.16);
+            backdrop-filter: blur(20px);
         }
 
-        .navigation {
+        .nav-wrap {
             display: flex;
-            min-height: 60px;
+            min-height: var(--header-height);
             align-items: center;
             justify-content: space-between;
-            gap: 24px;
+            gap: 22px;
         }
 
         .brand {
             display: inline-flex;
             align-items: center;
-            gap: 12px;
-            font-size: 1rem;
+            gap: 13px;
             font-weight: 900;
-            letter-spacing: -0.02em;
+            letter-spacing: -0.025em;
         }
 
         .brand-mark {
             display: grid;
-            width: 42px;
-            height: 42px;
+            width: 45px;
+            height: 45px;
             place-items: center;
-            border: 1px solid rgba(255, 255, 255, 0.14);
-            border-radius: 13px;
+            border: 1px solid rgba(255,255,255,0.14);
+            border-radius: 14px;
             background:
-                linear-gradient(
-                    145deg,
-                    rgba(124, 108, 255, 0.95),
-                    rgba(38, 215, 197, 0.7)
-                );
-            box-shadow: 0 10px 30px rgba(124, 108, 255, 0.25);
+                radial-gradient(circle at 25% 20%, rgba(255,255,255,0.42), transparent 30%),
+                linear-gradient(145deg, #264ed1, #7658ec 58%, #36cfe3);
+            box-shadow: 0 12px 34px rgba(75, 112, 245, 0.28);
         }
 
         .brand-mark svg {
-            width: 24px;
-            height: 24px;
+            width: 29px;
+            height: 29px;
+        }
+
+        .brand-name {
+            font-size: 1.05rem;
         }
 
         .nav-links {
             display: flex;
             align-items: center;
-            gap: 6px;
+            gap: 5px;
             list-style: none;
         }
 
         .nav-links a {
             display: block;
-            padding: 10px 14px;
+            padding: 10px 13px;
             border-radius: 999px;
-            color: var(--text-muted);
-            font-size: 0.94rem;
-            font-weight: 700;
-            transition:
-                color 180ms ease,
-                background 180ms ease;
+            color: var(--muted);
+            font-size: 0.92rem;
+            font-weight: 750;
+            transition: color 160ms ease, background 160ms ease;
         }
 
-        .nav-links a:hover {
-            color: var(--text);
-            background: rgba(255, 255, 255, 0.06);
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: white;
+            background: rgba(255,255,255,0.07);
         }
 
         .menu-button {
@@ -361,14 +345,13 @@
             place-items: center;
             border: 1px solid var(--border);
             border-radius: 14px;
-            color: white;
             background: var(--surface);
             cursor: pointer;
         }
 
         .menu-button svg {
-            width: 24px;
-            height: 24px;
+            width: 23px;
+            height: 23px;
         }
 
         .hero {
@@ -376,14 +359,14 @@
             min-height: 100vh;
             align-items: center;
             padding-top: 150px;
-            padding-bottom: 80px;
+            padding-bottom: 86px;
         }
 
         .hero-grid {
             display: grid;
-            grid-template-columns: minmax(0, 1.15fr) minmax(360px, 0.85fr);
+            grid-template-columns: minmax(0, 1.12fr) minmax(390px, 0.88fr);
             align-items: center;
-            gap: 64px;
+            gap: 62px;
         }
 
         .hero-copy {
@@ -391,607 +374,841 @@
             z-index: 2;
         }
 
-        .hero-copy p {
-            max-width: 700px;
+        .hero-copy .lead {
+            max-width: 740px;
             margin-top: 26px;
-            font-size: clamp(1rem, 2vw, 1.25rem);
+            font-size: clamp(1.02rem, 1.8vw, 1.25rem);
         }
 
         .hero-actions {
             display: flex;
             flex-wrap: wrap;
-            gap: 14px;
+            gap: 13px;
             margin-top: 34px;
         }
 
-        .hero-trust {
+        .hero-proof {
             display: flex;
             flex-wrap: wrap;
-            gap: 20px;
-            margin-top: 34px;
-            color: var(--text-muted);
-            font-size: 0.92rem;
-            font-weight: 700;
+            gap: 17px 25px;
+            margin-top: 32px;
+            color: var(--muted);
+            font-size: 0.9rem;
+            font-weight: 720;
         }
 
-        .trust-item {
+        .proof-item {
             display: inline-flex;
             align-items: center;
             gap: 8px;
         }
 
-        .trust-dot {
+        .proof-dot {
             width: 8px;
             height: 8px;
             border-radius: 50%;
-            background: var(--success);
-            box-shadow: 0 0 15px rgba(67, 209, 124, 0.7);
+            background: var(--green);
+            box-shadow: 0 0 16px rgba(98, 230, 167, 0.7);
         }
 
-        .hero-visual {
+        .hero-stage {
             position: relative;
             display: grid;
-            min-height: 520px;
+            min-height: 570px;
             place-items: center;
         }
 
-        .orb {
+        .stage-glow {
             position: absolute;
+            width: 420px;
+            height: 420px;
             border-radius: 50%;
-            filter: blur(1px);
-            animation: floating 6s ease-in-out infinite;
+            background: radial-gradient(circle, rgba(100,136,255,0.24), transparent 68%);
+            filter: blur(3px);
         }
 
-        .orb-one {
-            top: 20px;
-            right: 20px;
-            width: 130px;
-            height: 130px;
-            background:
-                linear-gradient(
-                    145deg,
-                    rgba(38, 215, 197, 0.9),
-                    rgba(38, 215, 197, 0.08)
-                );
-        }
-
-        .orb-two {
-            bottom: 40px;
-            left: 10px;
-            width: 100px;
-            height: 100px;
-            background:
-                linear-gradient(
-                    145deg,
-                    rgba(255, 184, 77, 0.9),
-                    rgba(255, 184, 77, 0.08)
-                );
-            animation-delay: -2s;
-        }
-
-        .visual-card {
+        .device-card {
             position: relative;
             width: min(100%, 420px);
-            min-height: 470px;
+            min-height: 510px;
             overflow: hidden;
-            padding: 28px;
+            padding: 23px;
             border: 1px solid var(--border);
-            border-radius: 36px;
+            border-radius: 39px;
             background:
-                linear-gradient(
-                    145deg,
-                    rgba(255, 255, 255, 0.12),
-                    rgba(255, 255, 255, 0.035)
-                );
+                linear-gradient(145deg, rgba(255,255,255,0.12), rgba(255,255,255,0.025)),
+                rgba(7,17,31,0.75);
             box-shadow: var(--shadow);
-            backdrop-filter: blur(20px);
-            transform: rotate(3deg);
+            backdrop-filter: blur(18px);
+            transform: rotate(2.5deg);
         }
 
-        .visual-card::before {
+        .device-card::before {
             position: absolute;
-            top: -80px;
+            top: -90px;
             right: -70px;
-            width: 240px;
-            height: 240px;
+            width: 250px;
+            height: 250px;
             content: "";
             border-radius: 50%;
-            background: rgba(124, 108, 255, 0.35);
-            filter: blur(20px);
+            background: rgba(110,231,249,0.16);
+            filter: blur(18px);
         }
 
-        .visual-header {
+        .device-top {
             position: relative;
             display: flex;
             align-items: center;
             justify-content: space-between;
         }
 
-        .visual-label {
+        .live-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
             padding: 8px 12px;
-            border: 1px solid var(--border);
+            border: 1px solid rgba(98,230,167,0.25);
             border-radius: 999px;
-            color: var(--secondary);
-            background: rgba(0, 0, 0, 0.12);
-            font-size: 0.75rem;
+            color: var(--green);
+            background: rgba(98,230,167,0.075);
+            font-size: 0.72rem;
             font-weight: 900;
             letter-spacing: 0.1em;
             text-transform: uppercase;
         }
 
-        .visual-dots {
+        .live-label::before {
+            width: 7px;
+            height: 7px;
+            content: "";
+            border-radius: 50%;
+            background: currentColor;
+            box-shadow: 0 0 12px currentColor;
+        }
+
+        .device-dots {
             display: flex;
             gap: 6px;
         }
 
-        .visual-dots span {
+        .device-dots span {
             width: 7px;
             height: 7px;
             border-radius: 50%;
-            background: rgba(255, 255, 255, 0.35);
+            background: rgba(255,255,255,0.32);
         }
 
-        .phone-display {
+        .featured-icon-wrap {
             position: relative;
-            display: grid;
-            width: 230px;
-            height: 310px;
-            margin: 42px auto 0;
-            overflow: hidden;
-            place-items: center;
-            border: 7px solid rgba(255, 255, 255, 0.84);
-            border-radius: 34px;
-            background:
-                radial-gradient(
-                    circle at 70% 25%,
-                    rgba(38, 215, 197, 0.75),
-                    transparent 30%
-                ),
-                radial-gradient(
-                    circle at 25% 75%,
-                    rgba(255, 184, 77, 0.7),
-                    transparent 30%
-                ),
-                linear-gradient(
-                    145deg,
-                    #1c2550,
-                    #8a55fa
-                );
-            box-shadow: 0 22px 55px rgba(0, 0, 0, 0.4);
+            width: 270px;
+            margin: 34px auto 0;
         }
 
-        .phone-display::before {
+        .featured-icon {
+            width: 270px;
+            height: 270px;
+            object-fit: cover;
+            border: 7px solid rgba(255,255,255,0.86);
+            border-radius: 62px;
+            box-shadow: 0 28px 64px rgba(0,0,0,0.42);
+        }
+
+        .featured-badge {
             position: absolute;
-            top: 9px;
-            width: 76px;
-            height: 17px;
-            content: "";
-            border-radius: 999px;
-            background: rgba(0, 0, 0, 0.65);
+            right: -14px;
+            bottom: 22px;
+            padding: 11px 14px;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            background: rgba(5,11,20,0.88);
+            box-shadow: var(--shadow-soft);
+            backdrop-filter: blur(14px);
         }
 
-        .game-symbol {
-            width: 100px;
-            height: 100px;
-            animation: pulse 3s ease-in-out infinite;
-            filter: drop-shadow(0 16px 24px rgba(0, 0, 0, 0.3));
+        .featured-badge strong {
+            display: block;
+            font-size: 0.92rem;
         }
 
-        .mini-card {
+        .featured-badge span {
+            color: var(--muted);
+            font-size: 0.73rem;
+        }
+
+        .device-caption {
+            position: relative;
+            margin-top: 28px;
+            text-align: center;
+        }
+
+        .device-caption small {
+            color: var(--cyan);
+            font-weight: 820;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .device-caption h3 {
+            margin-top: 7px;
+            font-size: 1.45rem;
+        }
+
+        .device-caption p {
+            margin-top: 7px;
+            font-size: 0.88rem;
+        }
+
+        .float-card {
             position: absolute;
-            right: 12px;
-            bottom: 30px;
-            width: 180px;
-            padding: 16px;
+            z-index: 4;
+            width: 178px;
+            padding: 15px;
             border: 1px solid var(--border);
             border-radius: 18px;
-            background: rgba(7, 11, 24, 0.82);
-            box-shadow: 0 18px 40px rgba(0, 0, 0, 0.3);
-            backdrop-filter: blur(12px);
-            transform: rotate(-4deg);
+            background: rgba(6,16,29,0.88);
+            box-shadow: var(--shadow-soft);
+            backdrop-filter: blur(14px);
         }
 
-        .mini-card strong {
+        .float-card strong {
             display: block;
-            margin-bottom: 4px;
-            font-size: 0.95rem;
+            font-size: 1.08rem;
         }
 
-        .mini-card span {
-            color: var(--text-muted);
-            font-size: 0.78rem;
+        .float-card span {
+            color: var(--muted);
+            font-size: 0.75rem;
         }
 
-        .stat-strip {
-            padding: 26px 0;
+        .float-one {
+            top: 115px;
+            left: -28px;
+            transform: rotate(-5deg);
+        }
+
+        .float-two {
+            right: -18px;
+            bottom: 80px;
+            transform: rotate(5deg);
+        }
+
+        .metrics-bar {
+            padding: 25px 0;
             border-top: 1px solid var(--border);
             border-bottom: 1px solid var(--border);
-            background: rgba(255, 255, 255, 0.025);
+            background: rgba(255,255,255,0.022);
         }
 
-        .stats {
+        .metrics-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
         }
 
-        .stat {
-            padding: 10px 24px;
+        .metric {
+            padding: 9px 25px;
             text-align: center;
         }
 
-        .stat + .stat {
+        .metric + .metric {
             border-left: 1px solid var(--border);
         }
 
-        .stat strong {
+        .metric strong {
             display: block;
-            font-size: clamp(1.5rem, 3vw, 2.2rem);
-            letter-spacing: -0.04em;
+            font-size: clamp(1.65rem, 3vw, 2.3rem);
+            letter-spacing: -0.045em;
         }
 
-        .stat span {
-            color: var(--text-muted);
-            font-size: 0.88rem;
+        .metric span {
+            color: var(--muted);
+            font-size: 0.84rem;
         }
 
-        .services-grid {
+        .account-grid {
             display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 22px;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 17px;
         }
 
-        .service-card,
-        .project-card,
-        .value-card {
+        .account-card {
             position: relative;
+            min-height: 240px;
             overflow: hidden;
+            padding: 25px;
             border: 1px solid var(--border);
-            background:
-                linear-gradient(
-                    145deg,
-                    rgba(255, 255, 255, 0.075),
-                    rgba(255, 255, 255, 0.025)
-                );
-            transition:
-                transform 200ms ease,
-                border-color 200ms ease,
-                background 200ms ease;
+            border-radius: var(--radius-md);
+            background: linear-gradient(145deg, rgba(255,255,255,0.075), rgba(255,255,255,0.025));
+            transition: transform 190ms ease, border-color 190ms ease, background 190ms ease;
         }
 
-        .service-card:hover,
-        .project-card:hover,
-        .value-card:hover {
-            transform: translateY(-8px);
-            border-color: rgba(124, 108, 255, 0.5);
-            background:
-                linear-gradient(
-                    145deg,
-                    rgba(124, 108, 255, 0.12),
-                    rgba(255, 255, 255, 0.035)
-                );
+        .account-card:hover {
+            transform: translateY(-7px);
+            border-color: var(--border-strong);
+            background: linear-gradient(145deg, rgba(110,231,249,0.11), rgba(255,255,255,0.025));
         }
 
-        .service-card {
-            min-height: 300px;
-            padding: 30px;
-            border-radius: var(--radius-medium);
-        }
-
-        .service-number {
+        .account-card::after {
             position: absolute;
-            top: 20px;
-            right: 24px;
-            color: rgba(255, 255, 255, 0.12);
-            font-size: 3rem;
-            font-weight: 900;
+            right: -45px;
+            bottom: -60px;
+            width: 170px;
+            height: 170px;
+            content: "";
+            border-radius: 50%;
+            background: var(--account-color, rgba(100,136,255,0.22));
+            filter: blur(8px);
+            opacity: 0.7;
         }
 
-        .icon-box {
+        .account-icon {
             display: grid;
-            width: 58px;
-            height: 58px;
-            margin-bottom: 28px;
+            width: 54px;
+            height: 54px;
+            margin-bottom: 24px;
             place-items: center;
-            border: 1px solid rgba(255, 255, 255, 0.12);
+            border: 1px solid var(--border);
             border-radius: 17px;
-            background:
-                linear-gradient(
-                    145deg,
-                    rgba(124, 108, 255, 0.35),
-                    rgba(38, 215, 197, 0.12)
-                );
+            background: rgba(255,255,255,0.065);
         }
 
-        .icon-box svg {
+        .account-icon svg {
             width: 28px;
             height: 28px;
         }
 
-        .service-card p {
-            margin-top: 14px;
+        .account-card p {
+            margin-top: 11px;
+            font-size: 0.9rem;
         }
 
-        .service-tags {
+        .account-meta {
+            position: relative;
+            z-index: 2;
             display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
             margin-top: 24px;
         }
 
-        .tag {
-            padding: 6px 10px;
+        .account-count {
+            color: var(--cyan);
+            font-size: 0.82rem;
+            font-weight: 820;
+        }
+
+        .mini-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--muted);
+            font-size: 0.78rem;
+            font-weight: 750;
+        }
+
+        .mini-link:hover {
+            color: white;
+        }
+
+        .portfolio {
+            background: rgba(255,255,255,0.016);
+        }
+
+        .portfolio-toolbar {
+            display: grid;
+            grid-template-columns: minmax(220px, 1fr) auto;
+            align-items: center;
+            gap: 18px;
+            margin-bottom: 28px;
+        }
+
+        .search-box {
+            position: relative;
+        }
+
+        .search-box svg {
+            position: absolute;
+            top: 50%;
+            left: 17px;
+            width: 19px;
+            height: 19px;
+            color: var(--muted-2);
+            transform: translateY(-50%);
+        }
+
+        .search-input {
+            width: 100%;
+            min-height: 50px;
+            padding: 0 18px 0 47px;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            outline: 0;
+            color: white;
+            background: rgba(255,255,255,0.045);
+            transition: border-color 160ms ease, box-shadow 160ms ease;
+        }
+
+        .search-input::placeholder {
+            color: var(--muted-2);
+        }
+
+        .search-input:focus {
+            border-color: rgba(110,231,249,0.48);
+            box-shadow: 0 0 0 4px rgba(110,231,249,0.07);
+        }
+
+        .filter-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            gap: 8px;
+        }
+
+        .filter-button {
+            min-height: 42px;
+            padding: 0 15px;
             border: 1px solid var(--border);
             border-radius: 999px;
-            color: var(--text-muted);
-            background: rgba(0, 0, 0, 0.12);
-            font-size: 0.75rem;
-            font-weight: 700;
+            color: var(--muted);
+            background: rgba(255,255,255,0.035);
+            font-size: 0.8rem;
+            font-weight: 780;
+            cursor: pointer;
+            transition: color 160ms ease, border-color 160ms ease, background 160ms ease;
         }
 
-        .projects {
-            background: rgba(255, 255, 255, 0.018);
+        .filter-button:hover,
+        .filter-button.active {
+            color: #06111f;
+            border-color: transparent;
+            background: var(--cyan);
         }
 
-        .projects-grid {
+        .results-line {
+            margin-bottom: 20px;
+            color: var(--muted);
+            font-size: 0.84rem;
+        }
+
+        .games-grid {
             display: grid;
             grid-template-columns: repeat(3, minmax(0, 1fr));
             gap: 22px;
         }
 
-        .project-card {
-            min-height: 390px;
-            border-radius: 24px;
+        .game-card {
+            position: relative;
+            display: flex;
+            min-height: 100%;
+            overflow: hidden;
+            flex-direction: column;
+            border: 1px solid var(--border);
+            border-radius: 25px;
+            background: linear-gradient(145deg, rgba(255,255,255,0.07), rgba(255,255,255,0.023));
+            box-shadow: 0 14px 40px rgba(0,0,0,0.15);
+            transition: transform 200ms ease, border-color 200ms ease, box-shadow 200ms ease;
         }
 
-        .project-art {
-            display: grid;
-            min-height: 220px;
+        .game-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(110,231,249,0.35);
+            box-shadow: 0 22px 60px rgba(0,0,0,0.28);
+        }
+
+        .game-card.hidden {
+            display: none;
+        }
+
+        .game-visual {
+            position: relative;
+            min-height: 210px;
+            overflow: hidden;
+            background:
+                radial-gradient(circle at 75% 20%, rgba(110,231,249,0.22), transparent 30%),
+                radial-gradient(circle at 15% 80%, rgba(154,124,255,0.24), transparent 34%),
+                linear-gradient(145deg, #0b1b30, #102742);
+        }
+
+        .game-visual::after {
+            position: absolute;
+            inset: auto 0 0;
+            height: 52%;
+            content: "";
+            background: linear-gradient(to top, rgba(5,11,20,0.82), transparent);
+        }
+
+        .game-icon-shell {
+            position: absolute;
+            z-index: 2;
+            top: 50%;
+            left: 50%;
+            width: 142px;
+            height: 142px;
+            overflow: hidden;
+            border: 5px solid rgba(255,255,255,0.84);
+            border-radius: 33px;
+            background: #15263d;
+            box-shadow: 0 22px 52px rgba(0,0,0,0.4);
+            transform: translate(-50%, -50%) rotate(-2deg);
+            transition: transform 200ms ease;
+        }
+
+        .game-card:hover .game-icon-shell {
+            transform: translate(-50%, -50%) rotate(0deg) scale(1.035);
+        }
+
+        .game-icon {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .icon-fallback {
+            display: none;
+            width: 100%;
+            height: 100%;
             place-items: center;
-            background:
-                radial-gradient(
-                    circle at 70% 25%,
-                    rgba(38, 215, 197, 0.45),
-                    transparent 30%
-                ),
-                radial-gradient(
-                    circle at 25% 75%,
-                    rgba(124, 108, 255, 0.6),
-                    transparent 35%
-                ),
-                linear-gradient(
-                    145deg,
-                    #101a38,
-                    #182754
-                );
+            color: white;
+            background: linear-gradient(145deg, #305bdb, #8a5ce4 60%, #39cbdc);
+            font-size: 2.2rem;
+            font-weight: 950;
         }
 
-        .project-card:nth-child(2) .project-art {
-            background:
-                radial-gradient(
-                    circle at 25% 20%,
-                    rgba(255, 184, 77, 0.55),
-                    transparent 28%
-                ),
-                radial-gradient(
-                    circle at 70% 70%,
-                    rgba(255, 107, 129, 0.45),
-                    transparent 30%
-                ),
-                linear-gradient(
-                    145deg,
-                    #341a2e,
-                    #6e3046
-                );
+        .download-badge {
+            position: absolute;
+            z-index: 3;
+            top: 15px;
+            right: 15px;
+            padding: 7px 10px;
+            border: 1px solid rgba(255,255,255,0.13);
+            border-radius: 999px;
+            color: white;
+            background: rgba(5,11,20,0.78);
+            font-size: 0.7rem;
+            font-weight: 850;
+            backdrop-filter: blur(12px);
         }
 
-        .project-card:nth-child(3) .project-art {
-            background:
-                radial-gradient(
-                    circle at 70% 20%,
-                    rgba(67, 209, 124, 0.5),
-                    transparent 28%
-                ),
-                radial-gradient(
-                    circle at 20% 75%,
-                    rgba(38, 215, 197, 0.45),
-                    transparent 32%
-                ),
-                linear-gradient(
-                    145deg,
-                    #102b2a,
-                    #174943
-                );
+        .game-content {
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            padding: 23px;
         }
 
-        .project-art svg {
-            width: 118px;
-            height: 118px;
-            filter: drop-shadow(0 18px 30px rgba(0, 0, 0, 0.25));
+        .game-account {
+            display: inline-flex;
+            width: fit-content;
+            align-items: center;
+            gap: 7px;
+            margin-bottom: 11px;
+            color: var(--cyan);
+            font-size: 0.71rem;
+            font-weight: 850;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
         }
 
-        .project-content {
-            padding: 25px;
+        .game-account::before {
+            width: 7px;
+            height: 7px;
+            content: "";
+            border-radius: 50%;
+            background: currentColor;
+            box-shadow: 0 0 11px currentColor;
         }
 
-        .project-meta {
+        .game-content h3 {
+            min-height: 2.75em;
+        }
+
+        .game-description {
+            margin-top: 11px;
+            font-size: 0.9rem;
+        }
+
+        .game-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+            margin-top: 17px;
+        }
+
+        .tag {
+            padding: 5px 9px;
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            color: var(--muted);
+            background: rgba(0,0,0,0.13);
+            font-size: 0.69rem;
+            font-weight: 720;
+        }
+
+        .game-actions {
             display: flex;
             align-items: center;
             justify-content: space-between;
             gap: 14px;
-            margin-bottom: 10px;
+            margin-top: auto;
+            padding-top: 22px;
         }
 
-        .project-type {
-            color: var(--secondary);
-            font-size: 0.75rem;
+        .play-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            color: white;
+            font-size: 0.86rem;
+            font-weight: 830;
+        }
+
+        .play-link:hover {
+            color: var(--cyan);
+        }
+
+        .play-link svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        .game-category {
+            color: var(--muted-2);
+            font-size: 0.72rem;
+            font-weight: 720;
+        }
+
+        .empty-state {
+            display: none;
+            padding: 60px 20px;
+            border: 1px dashed var(--border);
+            border-radius: 24px;
+            text-align: center;
+        }
+
+        .empty-state.visible {
+            display: block;
+        }
+
+        .empty-state h3 {
+            margin-bottom: 8px;
+        }
+
+        .story-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+            align-items: center;
+            gap: 72px;
+        }
+
+        .story-visual {
+            position: relative;
+            min-height: 520px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-xl);
+            background:
+                radial-gradient(circle at 24% 23%, rgba(100,136,255,0.42), transparent 29%),
+                radial-gradient(circle at 76% 74%, rgba(110,231,249,0.33), transparent 30%),
+                linear-gradient(145deg, #0a182b, #0a2032);
+            box-shadow: var(--shadow);
+        }
+
+        .story-visual::before,
+        .story-visual::after {
+            position: absolute;
+            content: "";
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 50%;
+        }
+
+        .story-visual::before {
+            top: 70px;
+            left: 54px;
+            width: 340px;
+            height: 340px;
+        }
+
+        .story-visual::after {
+            top: 125px;
+            left: 109px;
+            width: 230px;
+            height: 230px;
+        }
+
+        .story-logo {
+            position: absolute;
+            z-index: 3;
+            top: 50%;
+            left: 50%;
+            display: grid;
+            width: 175px;
+            height: 175px;
+            place-items: center;
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 48px;
+            background:
+                radial-gradient(circle at 25% 18%, rgba(255,255,255,0.48), transparent 30%),
+                linear-gradient(145deg, #2855dc, #7758eb 58%, #38d1e4);
+            box-shadow: 0 30px 75px rgba(0,0,0,0.42);
+            transform: translate(-50%, -50%) rotate(-7deg);
+        }
+
+        .story-logo svg {
+            width: 112px;
+            height: 112px;
+        }
+
+        .orbit-label {
+            position: absolute;
+            z-index: 4;
+            padding: 10px 13px;
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            color: white;
+            background: rgba(5,11,20,0.76);
+            box-shadow: var(--shadow-soft);
+            font-size: 0.74rem;
+            font-weight: 820;
+            backdrop-filter: blur(12px);
+        }
+
+        .orbit-label.one {
+            top: 72px;
+            right: 32px;
+        }
+
+        .orbit-label.two {
+            bottom: 70px;
+            left: 28px;
+        }
+
+        .story-copy > p {
+            max-width: 650px;
+            font-size: 1.03rem;
+        }
+
+        .timeline {
+            position: relative;
+            margin-top: 34px;
+            padding-left: 28px;
+        }
+
+        .timeline::before {
+            position: absolute;
+            top: 7px;
+            bottom: 8px;
+            left: 6px;
+            width: 2px;
+            content: "";
+            background: linear-gradient(var(--cyan), var(--purple));
+        }
+
+        .timeline-item {
+            position: relative;
+            padding: 0 0 28px 20px;
+        }
+
+        .timeline-item:last-child {
+            padding-bottom: 0;
+        }
+
+        .timeline-item::before {
+            position: absolute;
+            top: 5px;
+            left: -27px;
+            width: 13px;
+            height: 13px;
+            content: "";
+            border: 3px solid var(--bg-2);
+            border-radius: 50%;
+            background: var(--cyan);
+            box-shadow: 0 0 14px rgba(110,231,249,0.65);
+        }
+
+        .timeline-item:nth-child(2)::before {
+            background: var(--blue);
+            box-shadow: 0 0 14px rgba(100,136,255,0.65);
+        }
+
+        .timeline-item:nth-child(3)::before {
+            background: var(--purple);
+            box-shadow: 0 0 14px rgba(154,124,255,0.65);
+        }
+
+        .timeline-year {
+            color: var(--cyan);
+            font-size: 0.77rem;
             font-weight: 900;
             letter-spacing: 0.12em;
             text-transform: uppercase;
         }
 
-        .project-status {
-            padding: 5px 9px;
-            border: 1px solid rgba(67, 209, 124, 0.2);
-            border-radius: 999px;
-            color: var(--success);
-            background: rgba(67, 209, 124, 0.08);
-            font-size: 0.7rem;
-            font-weight: 800;
+        .timeline-item h3 {
+            margin: 4px 0 6px;
         }
 
-        .project-content p {
-            margin-top: 10px;
-            font-size: 0.94rem;
+        .timeline-item p {
+            font-size: 0.9rem;
         }
 
-        .about-grid {
+        .capabilities-grid {
             display: grid;
-            grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
-            align-items: center;
-            gap: 70px;
+            grid-template-columns: repeat(4, minmax(0,1fr));
+            gap: 15px;
+            margin-top: 34px;
         }
 
-        .about-panel {
-            position: relative;
-            min-height: 450px;
-            overflow: hidden;
+        .capability {
+            padding: 17px;
             border: 1px solid var(--border);
-            border-radius: var(--radius-large);
-            background:
-                radial-gradient(
-                    circle at 25% 25%,
-                    rgba(124, 108, 255, 0.45),
-                    transparent 30%
-                ),
-                radial-gradient(
-                    circle at 75% 75%,
-                    rgba(38, 215, 197, 0.38),
-                    transparent 30%
-                ),
-                #0d1326;
-            box-shadow: var(--shadow);
+            border-radius: 16px;
+            background: rgba(255,255,255,0.035);
         }
 
-        .about-panel::before,
-        .about-panel::after {
-            position: absolute;
-            content: "";
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            border-radius: 50%;
-        }
-
-        .about-panel::before {
-            top: 60px;
-            left: 60px;
-            width: 300px;
-            height: 300px;
-        }
-
-        .about-panel::after {
-            top: 110px;
-            left: 110px;
-            width: 200px;
-            height: 200px;
-        }
-
-        .about-logo {
-            position: absolute;
-            z-index: 2;
-            top: 50%;
-            left: 50%;
-            display: grid;
-            width: 150px;
-            height: 150px;
-            place-items: center;
-            border: 1px solid rgba(255, 255, 255, 0.18);
-            border-radius: 42px;
-            background:
-                linear-gradient(
-                    145deg,
-                    rgba(124, 108, 255, 0.9),
-                    rgba(38, 215, 197, 0.75)
-                );
-            box-shadow: 0 30px 70px rgba(0, 0, 0, 0.35);
-            transform: translate(-50%, -50%) rotate(-7deg);
-        }
-
-        .about-logo svg {
-            width: 86px;
-            height: 86px;
-        }
-
-        .about-copy > p {
-            max-width: 640px;
-            margin-bottom: 28px;
-            font-size: 1.05rem;
-        }
-
-        .values-grid {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 14px;
-        }
-
-        .value-card {
-            padding: 20px;
-            border-radius: 17px;
-        }
-
-        .value-card strong {
+        .capability strong {
             display: block;
-            margin-bottom: 5px;
+            margin-bottom: 4px;
+            font-size: 0.86rem;
         }
 
-        .value-card span {
-            color: var(--text-muted);
-            font-size: 0.88rem;
+        .capability span {
+            color: var(--muted);
+            font-size: 0.74rem;
         }
 
         .contact-card {
             position: relative;
             overflow: hidden;
-            padding: 64px;
+            padding: 68px 45px;
             border: 1px solid var(--border);
-            border-radius: 36px;
+            border-radius: 38px;
             background:
-                radial-gradient(
-                    circle at 90% 20%,
-                    rgba(38, 215, 197, 0.22),
-                    transparent 30%
-                ),
-                radial-gradient(
-                    circle at 10% 80%,
-                    rgba(124, 108, 255, 0.28),
-                    transparent 32%
-                ),
-                linear-gradient(
-                    145deg,
-                    rgba(255, 255, 255, 0.09),
-                    rgba(255, 255, 255, 0.03)
-                );
+                radial-gradient(circle at 90% 15%, rgba(110,231,249,0.2), transparent 28%),
+                radial-gradient(circle at 8% 85%, rgba(100,136,255,0.25), transparent 32%),
+                linear-gradient(145deg, rgba(255,255,255,0.085), rgba(255,255,255,0.025));
             box-shadow: var(--shadow);
             text-align: center;
         }
 
         .contact-card h2 {
-            max-width: 760px;
+            max-width: 780px;
             margin-inline: auto;
         }
 
         .contact-card p {
             max-width: 700px;
             margin: 0 auto 30px;
-            font-size: 1.05rem;
+            font-size: 1.02rem;
         }
 
         .contact-actions {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 14px;
+            gap: 13px;
         }
 
-        .site-footer {
+        .footer {
             padding: 34px 0;
             border-top: 1px solid var(--border);
         }
@@ -1004,25 +1221,24 @@
         }
 
         .footer-copy {
-            color: var(--text-muted);
-            font-size: 0.88rem;
+            color: var(--muted);
+            font-size: 0.86rem;
         }
 
         .footer-links {
             display: flex;
             flex-wrap: wrap;
-            gap: 20px;
+            gap: 19px;
         }
 
         .footer-links a {
-            color: var(--text-muted);
-            font-size: 0.88rem;
-            font-weight: 700;
-            transition: color 180ms ease;
+            color: var(--muted);
+            font-size: 0.84rem;
+            font-weight: 740;
         }
 
         .footer-links a:hover {
-            color: var(--text);
+            color: white;
         }
 
         .back-to-top {
@@ -1036,18 +1252,14 @@
             place-items: center;
             border: 1px solid var(--border);
             border-radius: 15px;
-            color: white;
-            background: rgba(13, 19, 38, 0.86);
-            box-shadow: 0 14px 35px rgba(0, 0, 0, 0.28);
+            background: rgba(7,17,31,0.88);
+            box-shadow: var(--shadow-soft);
             cursor: pointer;
             opacity: 0;
             visibility: hidden;
-            backdrop-filter: blur(12px);
-            transform: translateY(12px);
-            transition:
-                opacity 180ms ease,
-                visibility 180ms ease,
-                transform 180ms ease;
+            backdrop-filter: blur(14px);
+            transform: translateY(10px);
+            transition: opacity 170ms ease, visibility 170ms ease, transform 170ms ease;
         }
 
         .back-to-top.visible {
@@ -1063,10 +1275,8 @@
 
         .reveal {
             opacity: 0;
-            transform: translateY(28px);
-            transition:
-                opacity 700ms ease,
-                transform 700ms ease;
+            transform: translateY(25px);
+            transition: opacity 650ms ease, transform 650ms ease;
         }
 
         .reveal.visible {
@@ -1074,35 +1284,8 @@
             transform: translateY(0);
         }
 
-        @keyframes floating {
-            0%,
-            100% {
-                transform: translateY(0);
-            }
-
-            50% {
-                transform: translateY(-18px);
-            }
-        }
-
-        @keyframes pulse {
-            0%,
-            100% {
-                transform: scale(1);
-            }
-
-            50% {
-                transform: scale(1.08);
-            }
-        }
-
-        @media (max-width: 960px) {
-            section {
-                padding: 80px 0;
-            }
-
-            .hero-grid,
-            .about-grid {
+        @media (max-width: 1080px) {
+            .hero-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -1110,33 +1293,37 @@
                 text-align: center;
             }
 
-            .hero-copy p,
-            .hero-copy h1 {
+            .hero-copy h1,
+            .hero-copy .lead {
                 margin-inline: auto;
             }
 
             .hero-actions,
-            .hero-trust {
+            .hero-proof {
                 justify-content: center;
             }
 
-            .hero-visual {
-                min-height: 470px;
+            .hero-stage {
+                min-height: 550px;
             }
 
-            .services-grid,
-            .projects-grid {
-                grid-template-columns: repeat(2, minmax(0, 1fr));
+            .account-grid,
+            .capabilities-grid {
+                grid-template-columns: repeat(2, minmax(0,1fr));
             }
 
-            .about-panel {
-                min-height: 400px;
+            .games-grid {
+                grid-template-columns: repeat(2, minmax(0,1fr));
             }
         }
 
-        @media (max-width: 760px) {
-            .container {
-                width: min(calc(100% - 28px), var(--container));
+        @media (max-width: 880px) {
+            section {
+                padding: 86px 0;
+            }
+
+            .desktop-cta {
+                display: none;
             }
 
             .menu-button {
@@ -1145,23 +1332,20 @@
 
             .nav-links {
                 position: fixed;
-                top: 82px;
+                top: 89px;
                 right: 14px;
                 left: 14px;
                 display: grid;
                 padding: 14px;
                 border: 1px solid var(--border);
-                border-radius: 20px;
-                background: rgba(7, 11, 24, 0.97);
+                border-radius: 21px;
+                background: rgba(5,11,20,0.97);
                 box-shadow: var(--shadow);
                 opacity: 0;
                 visibility: hidden;
-                backdrop-filter: blur(18px);
-                transform: translateY(-15px);
-                transition:
-                    opacity 180ms ease,
-                    visibility 180ms ease,
-                    transform 180ms ease;
+                backdrop-filter: blur(20px);
+                transform: translateY(-12px);
+                transition: opacity 170ms ease, visibility 170ms ease, transform 170ms ease;
             }
 
             .nav-links.open {
@@ -1172,66 +1356,100 @@
 
             .nav-links a {
                 padding: 14px;
-                border-radius: 12px;
+                border-radius: 13px;
             }
 
-            .desktop-contact {
-                display: none;
+            .metrics-grid {
+                grid-template-columns: repeat(2,1fr);
+            }
+
+            .metric:nth-child(3) {
+                border-left: 0;
+            }
+
+            .metric:nth-child(n+3) {
+                margin-top: 17px;
+                padding-top: 22px;
+                border-top: 1px solid var(--border);
+            }
+
+            .portfolio-toolbar {
+                grid-template-columns: 1fr;
+            }
+
+            .filter-row {
+                justify-content: flex-start;
+            }
+
+            .story-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .story-visual {
+                min-height: 460px;
+            }
+
+            .section-header {
+                align-items: start;
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 650px) {
+            .container {
+                width: min(calc(100% - 28px), var(--container));
             }
 
             .hero {
                 min-height: auto;
-                padding-top: 130px;
+                padding-top: 132px;
             }
 
-            .hero-grid {
-                gap: 35px;
+            .hero-stage {
+                min-height: 500px;
             }
 
-            .hero-visual {
-                min-height: 430px;
+            .device-card {
+                width: min(100%, 355px);
+                min-height: 470px;
+                transform: none;
             }
 
-            .visual-card {
-                width: min(100%, 360px);
-                min-height: 420px;
-                padding: 22px;
+            .featured-icon-wrap,
+            .featured-icon {
+                width: 230px;
+                height: 230px;
             }
 
-            .phone-display {
-                width: 195px;
-                height: 270px;
+            .float-card {
+                width: 150px;
             }
 
-            .stats {
-                grid-template-columns: repeat(2, 1fr);
+            .float-one {
+                left: -4px;
             }
 
-            .stat:nth-child(3) {
-                border-left: 0;
+            .float-two {
+                right: -2px;
             }
 
-            .stat:nth-child(n + 3) {
-                margin-top: 18px;
-                padding-top: 24px;
-                border-top: 1px solid var(--border);
-            }
-
-            .services-grid,
-            .projects-grid {
+            .account-grid,
+            .games-grid,
+            .capabilities-grid {
                 grid-template-columns: 1fr;
             }
 
-            .values-grid {
-                grid-template-columns: 1fr;
+            .game-content h3 {
+                min-height: 0;
             }
 
             .contact-card {
-                padding: 45px 22px;
-                border-radius: 26px;
+                padding: 48px 20px;
+                border-radius: 28px;
             }
 
             .footer-grid {
+                align-items: center;
                 flex-direction: column;
                 text-align: center;
             }
@@ -1241,13 +1459,13 @@
             }
         }
 
-        @media (max-width: 480px) {
+        @media (max-width: 460px) {
             h1 {
-                font-size: clamp(2.7rem, 14vw, 4rem);
+                font-size: clamp(2.8rem, 14vw, 4rem);
             }
 
-            .brand span {
-                max-width: 175px;
+            .brand-name {
+                max-width: 165px;
                 line-height: 1.15;
             }
 
@@ -1261,13 +1479,23 @@
                 width: 100%;
             }
 
-            .visual-card {
-                transform: none;
+            .filter-row {
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
             }
 
-            .mini-card {
-                right: 4px;
-                width: 160px;
+            .filter-button {
+                padding-inline: 10px;
+            }
+
+            .story-logo {
+                width: 145px;
+                height: 145px;
+            }
+
+            .story-logo svg {
+                width: 92px;
+                height: 92px;
             }
         }
 
@@ -1296,9 +1524,10 @@
     {
         "@context": "https://schema.org",
         "@type": "Organization",
-        "name": "Modern Technologies Star",
+        "name": "Modern Technologies",
         "url": "https://modern-technologies-star.github.io/",
-        "description": "Mobile games, Android applications, and interactive digital experiences.",
+        "description": "Independent mobile games and apps company with 10+ years of industry experience, working since 2016 and publishing on Google Play since 2018.",
+        "foundingDate": "2016",
         "email": "simulation.gaming.studio@gmail.com",
         "sameAs": [
             "https://github.com/modern-technologies-star"
@@ -1309,35 +1538,34 @@
 
 <body>
     <header class="site-header" id="siteHeader">
-        <div class="container navigation">
-            <a class="brand" href="#home" aria-label="Modern Technologies Star home">
+        <div class="container nav-wrap">
+            <a class="brand" href="#home" aria-label="Modern Technologies home">
                 <span class="brand-mark" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" fill="none">
+                    <svg viewBox="0 0 100 100" fill="none">
                         <path
-                            d="M12 2.5L14.85 8.28L21.23 9.21L16.62 13.7L17.71 20.05L12 17.05L6.29 20.05L7.38 13.7L2.77 9.21L9.15 8.28L12 2.5Z"
+                            d="M16 75V25H30L50 50L70 25H84V75H69V48L50 70L31 48V75H16Z"
                             fill="white"
                         />
                     </svg>
                 </span>
-
-                <span>Modern Technologies Star</span>
+                <span class="brand-name">Modern Technologies</span>
             </a>
 
             <nav aria-label="Main navigation">
                 <ul class="nav-links" id="navLinks">
                     <li><a href="#home">Home</a></li>
-                    <li><a href="#services">What We Do</a></li>
-                    <li><a href="#projects">Our Work</a></li>
+                    <li><a href="#accounts">Studios</a></li>
+                    <li><a href="#portfolio">Games & Apps</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
 
             <a
-                class="button button-primary desktop-contact"
-                href="mailto:simulation.gaming.studio@gmail.com"
+                class="button button-primary desktop-cta"
+                href="#portfolio"
             >
-                Contact Us
+                View Portfolio
             </a>
 
             <button
@@ -1348,13 +1576,8 @@
                 aria-controls="navLinks"
                 aria-expanded="false"
             >
-                <svg id="menuIcon" viewBox="0 0 24 24" fill="none">
-                    <path
-                        d="M4 7H20M4 12H20M4 17H20"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                    />
+                <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M4 7H20M4 12H20M4 17H20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                 </svg>
             </button>
         </div>
@@ -1364,529 +1587,25 @@
         <section class="hero" id="home">
             <div class="container hero-grid">
                 <div class="hero-copy">
-                    <span class="eyebrow">Games. Apps. Technology.</span>
+                    <span class="eyebrow">Independent Games & Apps Company</span>
 
                     <h1>
-                        We create
-                        <span class="gradient-text">digital experiences</span>
-                        that people enjoy.
+                        A decade of turning
+                        <span class="gradient-text">ideas into playable worlds.</span>
                     </h1>
 
-                    <p>
-                        Modern Technologies Star develops engaging mobile games,
-                        useful Android applications, and interactive products
-                        designed for audiences around the world.
+                    <p class="lead">
+                        Modern Technologies creates mobile games, Android apps and interactive
+                        entertainment for global audiences. We have 10+ years of industry
+                        experience, have worked professionally since 2016, and have published
+                        on Google Play since 2018.
                     </p>
 
                     <div class="hero-actions">
-                        <a class="button button-primary" href="#projects">
-                            Explore Our Work
-
-                            <svg
-                                class="button-icon"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                aria-hidden="true"
-                            >
-                                <path
-                                    d="M5 12H19M13 6L19 12L13 18"
-                                    stroke="currentColor"
-                                    stroke-width="2"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                />
-                            </svg>
-                        </a>
-
-                        <a
-                            class="button button-secondary"
-                            href="https://github.com/modern-technologies-star"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            Visit GitHub
-                        </a>
-                    </div>
-
-                    <div class="hero-trust">
-                        <span class="trust-item">
-                            <span class="trust-dot"></span>
-                            Mobile-first development
-                        </span>
-
-                        <span class="trust-item">
-                            <span class="trust-dot"></span>
-                            Global publishing
-                        </span>
-
-                        <span class="trust-item">
-                            <span class="trust-dot"></span>
-                            Player-focused design
-                        </span>
-                    </div>
-                </div>
-
-                <div class="hero-visual" aria-hidden="true">
-                    <span class="orb orb-one"></span>
-                    <span class="orb orb-two"></span>
-
-                    <div class="visual-card">
-                        <div class="visual-header">
-                            <span class="visual-label">Now Creating</span>
-
-                            <div class="visual-dots">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </div>
-                        </div>
-
-                        <div class="phone-display">
-                            <svg
-                                class="game-symbol"
-                                viewBox="0 0 120 120"
-                                fill="none"
-                            >
-                                <path
-                                    d="M60 9L72.97 39.76L106.31 42.63L80.99 64.49L88.58 97.07L60 79.8L31.42 97.07L39.01 64.49L13.69 42.63L47.03 39.76L60 9Z"
-                                    fill="white"
-                                    fill-opacity="0.96"
-                                />
-                                <circle
-                                    cx="60"
-                                    cy="59"
-                                    r="16"
-                                    fill="#7C6CFF"
-                                />
-                            </svg>
-                        </div>
-
-                        <div class="mini-card">
-                            <strong>Mobile Experiences</strong>
-                            <span>Built for Android and modern devices</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <div class="stat-strip">
-            <div class="container stats">
-                <div class="stat">
-                    <strong>7+</strong>
-                    <span>Years of development experience</span>
-                </div>
-
-                <div class="stat">
-                    <strong>Mobile</strong>
-                    <span>Focused products and experiences</span>
-                </div>
-
-                <div class="stat">
-                    <strong>Global</strong>
-                    <span>Worldwide audience support</span>
-                </div>
-
-                <div class="stat">
-                    <strong>Unity</strong>
-                    <span>Professional game development</span>
-                </div>
-            </div>
-        </div>
-
-        <section id="services">
-            <div class="container">
-                <div class="section-heading reveal">
-                    <span class="eyebrow">What We Do</span>
-
-                    <h2>
-                        Technology powered by
-                        <span class="gradient-text">creativity</span>
-                    </h2>
-
-                    <p>
-                        We combine gameplay engineering, mobile development,
-                        analytics, and product design to create accessible and
-                        enjoyable digital products.
-                    </p>
-                </div>
-
-                <div class="services-grid">
-                    <article class="service-card reveal">
-                        <span class="service-number">01</span>
-
-                        <div class="icon-box">
-                            <svg viewBox="0 0 24 24" fill="none">
-                                <path
-                                    d="M8 12H16M12 8V16M6.5 19H17.5C19.43 19 21 17.43 21 15.5V8.5C21 6.57 19.43 5 17.5 5H6.5C4.57 5 3 6.57 3 8.5V15.5C3 17.43 4.57 19 6.5 19Z"
-                                    stroke="currentColor"
-                                    stroke-width="1.8"
-                                    stroke-linecap="round"
-                                />
-                                <circle cx="17.5" cy="10" r="1" fill="currentColor"/>
-                                <circle cx="15.5" cy="13" r="1" fill="currentColor"/>
-                            </svg>
-                        </div>
-
-                        <h3>Mobile Game Development</h3>
-
-                        <p>
-                            Entertaining mobile games with responsive controls,
-                            rewarding progression, polished interfaces, and
-                            scalable monetization systems.
-                        </p>
-
-                        <div class="service-tags">
-                            <span class="tag">Unity</span>
-                            <span class="tag">Android</span>
-                            <span class="tag">iOS</span>
-                            <span class="tag">C#</span>
-                        </div>
-                    </article>
-
-                    <article class="service-card reveal">
-                        <span class="service-number">02</span>
-
-                        <div class="icon-box">
-                            <svg viewBox="0 0 24 24" fill="none">
-                                <rect
-                                    x="7"
-                                    y="2.5"
-                                    width="10"
-                                    height="19"
-                                    rx="2.5"
-                                    stroke="currentColor"
-                                    stroke-width="1.8"
-                                />
-                                <path
-                                    d="M10 5H14M11 18.5H13"
-                                    stroke="currentColor"
-                                    stroke-width="1.8"
-                                    stroke-linecap="round"
-                                />
-                            </svg>
-                        </div>
-
-                        <h3>Android Applications</h3>
-
-                        <p>
-                            Practical Android apps created with performance,
-                            usability, compatibility, privacy, and long-term
-                            maintainability in mind.
-                        </p>
-
-                        <div class="service-tags">
-                            <span class="tag">Android</span>
-                            <span class="tag">Firebase</span>
-                            <span class="tag">Analytics</span>
-                            <span class="tag">AdMob</span>
-                        </div>
-                    </article>
-
-                    <article class="service-card reveal">
-                        <span class="service-number">03</span>
-
-                        <div class="icon-box">
-                            <svg viewBox="0 0 24 24" fill="none">
-                                <path
-                                    d="M4 6.5C4 5.12 5.12 4 6.5 4H17.5C18.88 4 20 5.12 20 6.5V15.5C20 16.88 18.88 18 17.5 18H6.5C5.12 18 4 16.88 4 15.5V6.5Z"
-                                    stroke="currentColor"
-                                    stroke-width="1.8"
-                                />
-                                <path
-                                    d="M8 21H16M12 18V21"
-                                    stroke="currentColor"
-                                    stroke-width="1.8"
-                                    stroke-linecap="round"
-                                />
-                                <path
-                                    d="M8 9L10.5 11.5L8 14M13 14H16"
-                                    stroke="currentColor"
-                                    stroke-width="1.8"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                />
-                            </svg>
-                        </div>
-
-                        <h3>Interactive Technology</h3>
-
-                        <p>
-                            Backend-connected experiences, analytics systems,
-                            live operations tools, websites, and supporting
-                            technology for modern digital products.
-                        </p>
-
-                        <div class="service-tags">
-                            <span class="tag">Web</span>
-                            <span class="tag">Backend</span>
-                            <span class="tag">APIs</span>
-                            <span class="tag">Cloud</span>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section class="projects" id="projects">
-            <div class="container">
-                <div class="section-heading center reveal">
-                    <span class="eyebrow">Our Work</span>
-
-                    <h2>
-                        Experiences built for
-                        <span class="gradient-text">modern audiences</span>
-                    </h2>
-
-                    <p>
-                        Our portfolio includes action games, simulation
-                        experiences, puzzle games, utility apps, and other
-                        mobile-first products.
-                    </p>
-                </div>
-
-                <div class="projects-grid">
-                    <article class="project-card reveal">
-                        <div class="project-art">
-                            <svg viewBox="0 0 120 120" fill="none">
-                                <path
-                                    d="M25 73L40 48H80L95 73V88H83V79H37V88H25V73Z"
-                                    fill="white"
-                                    fill-opacity="0.92"
-                                />
-                                <path
-                                    d="M43 48L51 35H69L77 48"
-                                    stroke="white"
-                                    stroke-width="6"
-                                    stroke-linejoin="round"
-                                />
-                                <circle cx="40" cy="73" r="7" fill="#26D7C5"/>
-                                <circle cx="80" cy="73" r="7" fill="#26D7C5"/>
-                                <path
-                                    d="M53 62H67"
-                                    stroke="#7C6CFF"
-                                    stroke-width="6"
-                                    stroke-linecap="round"
-                                />
-                            </svg>
-                        </div>
-
-                        <div class="project-content">
-                            <div class="project-meta">
-                                <span class="project-type">Simulation</span>
-                                <span class="project-status">In Development</span>
-                            </div>
-
-                            <h3>Driving and Vehicle Games</h3>
-
-                            <p>
-                                Accessible driving experiences featuring
-                                vehicles, missions, upgrades, environments, and
-                                progression-focused gameplay.
-                            </p>
-                        </div>
-                    </article>
-
-                    <article class="project-card reveal">
-                        <div class="project-art">
-                            <svg viewBox="0 0 120 120" fill="none">
-                                <path
-                                    d="M27 80L53 54L66 67L94 39"
-                                    stroke="white"
-                                    stroke-width="10"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                />
-                                <path
-                                    d="M74 39H94V59"
-                                    stroke="white"
-                                    stroke-width="10"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                />
-                                <circle cx="35" cy="87" r="10" fill="#FFB84D"/>
-                            </svg>
-                        </div>
-
-                        <div class="project-content">
-                            <div class="project-meta">
-                                <span class="project-type">Action</span>
-                                <span class="project-status">Mobile</span>
-                            </div>
-
-                            <h3>Action and Shooter Games</h3>
-
-                            <p>
-                                Fast-paced mobile games designed around
-                                responsive controls, progression, challenges,
-                                missions, and replayable combat.
-                            </p>
-                        </div>
-                    </article>
-
-                    <article class="project-card reveal">
-                        <div class="project-art">
-                            <svg viewBox="0 0 120 120" fill="none">
-                                <rect
-                                    x="26"
-                                    y="26"
-                                    width="30"
-                                    height="30"
-                                    rx="8"
-                                    fill="white"
-                                    fill-opacity="0.94"
-                                />
-                                <rect
-                                    x="64"
-                                    y="26"
-                                    width="30"
-                                    height="30"
-                                    rx="8"
-                                    fill="#43D17C"
-                                />
-                                <rect
-                                    x="26"
-                                    y="64"
-                                    width="30"
-                                    height="30"
-                                    rx="8"
-                                    fill="#26D7C5"
-                                />
-                                <path
-                                    d="M64 79H94"
-                                    stroke="white"
-                                    stroke-width="10"
-                                    stroke-linecap="round"
-                                />
-                            </svg>
-                        </div>
-
-                        <div class="project-content">
-                            <div class="project-meta">
-                                <span class="project-type">Puzzle & Utility</span>
-                                <span class="project-status">Android</span>
-                            </div>
-
-                            <h3>Puzzles and Useful Apps</h3>
-
-                            <p>
-                                Simple, polished applications focused on clear
-                                usability, engaging interactions, and reliable
-                                mobile performance.
-                            </p>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section id="about">
-            <div class="container about-grid">
-                <div class="about-panel reveal" aria-hidden="true">
-                    <div class="about-logo">
-                        <svg viewBox="0 0 120 120" fill="none">
-                            <path
-                                d="M60 9L72.97 39.76L106.31 42.63L80.99 64.49L88.58 97.07L60 79.8L31.42 97.07L39.01 64.49L13.69 42.63L47.03 39.76L60 9Z"
-                                fill="white"
-                            />
-                        </svg>
-                    </div>
-                </div>
-
-                <div class="about-copy reveal">
-                    <span class="eyebrow">About Us</span>
-
-                    <h2>
-                        Building products with
-                        <span class="gradient-text">purpose and personality</span>
-                    </h2>
-
-                    <p>
-                        Modern Technologies Star is an independent technology
-                        and development studio focused on mobile games and
-                        applications. We aim to create products that are easy to
-                        understand, enjoyable to use, technically reliable, and
-                        capable of reaching users worldwide.
-                    </p>
-
-                    <div class="values-grid">
-                        <div class="value-card">
-                            <strong>Player First</strong>
-                            <span>
-                                Gameplay and usability decisions begin with the
-                                user experience.
-                            </span>
-                        </div>
-
-                        <div class="value-card">
-                            <strong>Quality Engineering</strong>
-                            <span>
-                                Clean systems, reliable integrations, and
-                                maintainable architecture.
-                            </span>
-                        </div>
-
-                        <div class="value-card">
-                            <strong>Continuous Improvement</strong>
-                            <span>
-                                Products evolve through analytics, feedback,
-                                testing, and iteration.
-                            </span>
-                        </div>
-
-                        <div class="value-card">
-                            <strong>Global Reach</strong>
-                            <span>
-                                Mobile experiences designed for diverse devices
-                                and audiences.
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact">
-            <div class="container">
-                <div class="contact-card reveal">
-                    <span class="eyebrow">Contact</span>
-
-                    <h2>
-                        Let’s create something
-                        <span class="gradient-text">worth experiencing</span>
-                    </h2>
-
-                    <p>
-                        Contact Modern Technologies Star regarding our games,
-                        applications, technical support, publishing, or business
-                        opportunities.
-                    </p>
-
-                    <div class="contact-actions">
-                        <a
-                            class="button button-primary"
-                            href="mailto:simulation.gaming.studio@gmail.com"
-                        >
-                            Email Us
-
-                            <svg
-                                class="button-icon"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                aria-hidden="true"
-                            >
-                                <path
-                                    d="M4 6H20V18H4V6Z"
-                                    stroke="currentColor"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                />
-                                <path
-                                    d="M4 7L12 13L20 7"
-                                    stroke="currentColor"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                />
+                        <a class="button button-primary" href="#portfolio">
+                            Explore 13 Releases
+                            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <path d="M5 12H19M13 6L19 12L13 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </a>
 
@@ -1899,79 +1618,622 @@
                             GitHub Profile
                         </a>
                     </div>
+
+                    <div class="hero-proof">
+                        <span class="proof-item"><span class="proof-dot"></span>Unity & mobile development</span>
+                        <span class="proof-item"><span class="proof-dot"></span>Google Play publishing</span>
+                        <span class="proof-item"><span class="proof-dot"></span>Games across multiple genres</span>
+                    </div>
+                </div>
+
+                <div class="hero-stage" aria-label="Featured Modern Technologies game">
+                    <div class="stage-glow"></div>
+
+                    <div class="float-card float-one">
+                        <strong>10+ Years</strong>
+                        <span>Industry experience</span>
+                    </div>
+
+                    <div class="device-card">
+                        <div class="device-top">
+                            <span class="live-label">Featured Release</span>
+                            <div class="device-dots" aria-hidden="true">
+                                <span></span><span></span><span></span>
+                            </div>
+                        </div>
+
+                        <div class="featured-icon-wrap">
+                            <img
+                                class="featured-icon"
+                                src="https://play-lh.googleusercontent.com/NXDzUeQg9iCwbhbpTIAvFiE-3DESWiJ-n5GNsDwepEIv-lqE56Kybts0sSfHL8U2cS9osn5rCvh9mxyMyDr2pg=w480-h960"
+                                alt="Morflect Voice Changer Effects app icon"
+                            >
+                            <div class="featured-badge">
+                                <strong>New Utility App</strong>
+                                <span>Voice, audio & creativity</span>
+                            </div>
+                        </div>
+
+                        <div class="device-caption">
+                            <small>Birth Gaming Studio</small>
+                            <h3>Morflect Voice Changer Effects</h3>
+                            <p>Record, transform, edit and share creative audio.</p>
+                        </div>
+                    </div>
+
+                    <div class="float-card float-two">
+                        <strong>Since 2018</strong>
+                        <span>Publishing on Google Play</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="metrics-bar" aria-label="Company milestones">
+            <div class="container metrics-grid">
+                <div class="metric">
+                    <strong>10+</strong>
+                    <span>Years of industry experience</span>
+                </div>
+                <div class="metric">
+                    <strong>2016</strong>
+                    <span>Professional journey began</span>
+                </div>
+                <div class="metric">
+                    <strong>2018</strong>
+                    <span>Google Play publishing began</span>
+                </div>
+                <div class="metric">
+                    <strong>13</strong>
+                    <span>Games and apps showcased</span>
+                </div>
+            </div>
+        </div>
+
+        <section id="accounts">
+            <div class="container">
+                <div class="section-header reveal">
+                    <div class="section-copy">
+                        <span class="eyebrow">Publishing Network</span>
+                        <h2>
+                            One company. Multiple
+                            <span class="gradient-text">specialized publishing identities.</span>
+                        </h2>
+                        <p>
+                            Modern Technologies publishes its portfolio through focused Google Play
+                            accounts, allowing each studio identity to serve a distinct audience and genre.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="account-grid">
+                    <a
+                        class="account-card reveal"
+                        style="--account-color: rgba(110,231,249,0.28)"
+                        href="https://play.google.com/store/apps/developer?id=Birth+Gaming+Studio"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <div class="account-icon">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <path d="M12 3L14.7 8.47L20.73 9.35L16.36 13.61L17.39 19.62L12 16.79L6.61 19.62L7.64 13.61L3.27 9.35L9.3 8.47L12 3Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3>Birth Gaming Studio</h3>
+                        <p>Creative utility apps and fresh mobile experiences, including Morflect.</p>
+                        <div class="account-meta">
+                            <span class="account-count">1 showcased app</span>
+                            <span class="mini-link">Open on Play ↗</span>
+                        </div>
+                    </a>
+
+                    <a
+                        class="account-card reveal"
+                        style="--account-color: rgba(255,113,141,0.28)"
+                        href="https://play.google.com/store/apps/developer?id=TPS+Shooter+%26+Action+Games"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <div class="account-icon">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <path d="M4 14L10 8L16 14M8 18L14 12L20 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M5 5H19" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h3>TPS Shooter & Action Games</h3>
+                        <p>Action, shooter and police-driving experiences for mobile players.</p>
+                        <div class="account-meta">
+                            <span class="account-count">3 showcased games</span>
+                            <span class="mini-link">Open on Play ↗</span>
+                        </div>
+                    </a>
+
+                    <a
+                        class="account-card reveal"
+                        style="--account-color: rgba(100,136,255,0.3)"
+                        href="https://play.google.com/store/apps/dev?id=8490607248807111211"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <div class="account-icon">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <path d="M4 16.5L8.5 12L12 15.5L17.5 10L20 12.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M4 5H20V19H4V5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3>CFG Studio</h3>
+                        <p>Driving, racing, hunting and simulation games with a broad global audience.</p>
+                        <div class="account-meta">
+                            <span class="account-count">7 showcased games</span>
+                            <span class="mini-link">Open on Play ↗</span>
+                        </div>
+                    </a>
+
+                    <a
+                        class="account-card reveal"
+                        style="--account-color: rgba(255,121,198,0.28)"
+                        href="https://play.google.com/store/apps/dev?id=5194807779769490867"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <div class="account-icon">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <path d="M5 12H19M12 5V19" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                                <circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1.8"/>
+                            </svg>
+                        </div>
+                        <h3>Gaming Stock</h3>
+                        <p>Colorful puzzle and driving games designed for accessible mobile fun.</p>
+                        <div class="account-meta">
+                            <span class="account-count">2 showcased games</span>
+                            <span class="mini-link">Open on Play ↗</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="portfolio" id="portfolio">
+            <div class="container">
+                <div class="section-header reveal">
+                    <div class="section-copy">
+                        <span class="eyebrow">Games & Apps</span>
+                        <h2>
+                            Explore the
+                            <span class="gradient-text">Modern Technologies portfolio.</span>
+                        </h2>
+                        <p>
+                            Browse releases by publisher account, search by title, and open any
+                            game or app directly on Google Play.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="portfolio-toolbar reveal">
+                    <label class="search-box" for="gameSearch">
+                        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/>
+                            <path d="M16.5 16.5L21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <input
+                            class="search-input"
+                            id="gameSearch"
+                            type="search"
+                            placeholder="Search games, apps, genres or publishers..."
+                            autocomplete="off"
+                        >
+                    </label>
+
+                    <div class="filter-row" aria-label="Filter portfolio by publisher">
+                        <button class="filter-button active" type="button" data-filter="all">All</button>
+                        <button class="filter-button" type="button" data-filter="Birth Gaming Studio">Birth Gaming</button>
+                        <button class="filter-button" type="button" data-filter="TPS Shooter & Action Games">TPS Action</button>
+                        <button class="filter-button" type="button" data-filter="CFG Studio">CFG Studio</button>
+                        <button class="filter-button" type="button" data-filter="Gaming Stock">Gaming Stock</button>
+                    </div>
+                </div>
+
+                <div class="results-line" id="resultsLine" aria-live="polite">Showing 13 releases</div>
+
+                <div class="games-grid" id="gamesGrid"></div>
+
+                <div class="empty-state" id="emptyState">
+                    <h3>No matching release found</h3>
+                    <p>Try another title, genre or publisher account.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="container story-grid">
+                <div class="story-visual reveal" aria-hidden="true">
+                    <span class="orbit-label one">Mobile-first products</span>
+                    <span class="orbit-label two">Built for global players</span>
+
+                    <div class="story-logo">
+                        <svg viewBox="0 0 100 100" fill="none">
+                            <path d="M14 76V24H29L50 50L71 24H86V76H70V49L50 72L30 49V76H14Z" fill="white"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="story-copy reveal">
+                    <span class="eyebrow">Our Story</span>
+                    <h2>
+                        Experience built through
+                        <span class="gradient-text">consistent creation.</span>
+                    </h2>
+                    <p>
+                        Modern Technologies combines game design, Unity engineering, Android
+                        development, analytics, monetization and publishing experience. Our work
+                        spans action, simulation, racing, hunting, puzzle and utility products.
+                    </p>
+
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <span class="timeline-year">2016</span>
+                            <h3>Industry journey begins</h3>
+                            <p>Professional game and application development work begins.</p>
+                        </div>
+
+                        <div class="timeline-item">
+                            <span class="timeline-year">2018</span>
+                            <h3>Google Play publishing begins</h3>
+                            <p>Modern Technologies starts releasing mobile products to global audiences.</p>
+                        </div>
+
+                        <div class="timeline-item">
+                            <span class="timeline-year">Today</span>
+                            <h3>10+ years of experience</h3>
+                            <p>A growing multi-genre portfolio published through four specialized accounts.</p>
+                        </div>
+                    </div>
+
+                    <div class="capabilities-grid">
+                        <div class="capability">
+                            <strong>Unity & C#</strong>
+                            <span>Game systems and production</span>
+                        </div>
+                        <div class="capability">
+                            <strong>Android</strong>
+                            <span>Mobile optimization and release</span>
+                        </div>
+                        <div class="capability">
+                            <strong>Monetization</strong>
+                            <span>Ads and in-app purchase systems</span>
+                        </div>
+                        <div class="capability">
+                            <strong>Analytics</strong>
+                            <span>Iteration guided by product data</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <div class="contact-card reveal">
+                    <span class="eyebrow">Contact Modern Technologies</span>
+                    <h2>
+                        Let’s build the next
+                        <span class="gradient-text">engaging mobile experience.</span>
+                    </h2>
+                    <p>
+                        Contact us regarding our games, apps, technical support, publishing,
+                        partnerships or business opportunities.
+                    </p>
+
+                    <div class="contact-actions">
+                        <a
+                            class="button button-primary"
+                            href="mailto:simulation.gaming.studio@gmail.com"
+                        >
+                            Email Us
+                            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <path d="M4 6H20V18H4V6Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                                <path d="M4 7L12 13L20 7" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+
+                        <a
+                            class="button button-secondary"
+                            href="https://github.com/modern-technologies-star"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Visit GitHub
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="site-footer">
+    <footer class="footer">
         <div class="container footer-grid">
             <div class="footer-copy">
-                © <span id="currentYear"></span> Modern Technologies Star.
-                All rights reserved.
+                © <span id="currentYear"></span> Modern Technologies. All rights reserved.
             </div>
 
             <div class="footer-links">
+                <a href="#portfolio">Games & Apps</a>
                 <a href="privacy-policy.html">Privacy Policy</a>
                 <a href="app-ads.txt">app-ads.txt</a>
-                <a
-                    href="https://github.com/modern-technologies-star"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    GitHub
-                </a>
-                <a href="mailto:simulation.gaming.studio@gmail.com">
-                    Contact
-                </a>
+                <a href="mailto:simulation.gaming.studio@gmail.com">Contact</a>
             </div>
         </div>
     </footer>
 
-    <button
-        class="back-to-top"
-        id="backToTop"
-        type="button"
-        aria-label="Back to top"
-    >
+    <button class="back-to-top" id="backToTop" type="button" aria-label="Back to top">
         <svg viewBox="0 0 24 24" fill="none">
-            <path
-                d="M6 14L12 8L18 14"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-            />
+            <path d="M6 14L12 8L18 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
     </button>
 
     <script>
         "use strict";
 
+        const games = [
+            {
+                title: "Morflect Voice Changer Effects",
+                account: "Birth Gaming Studio",
+                category: "Music & Audio",
+                downloads: "New release",
+                icon: "https://play-lh.googleusercontent.com/NXDzUeQg9iCwbhbpTIAvFiE-3DESWiJ-n5GNsDwepEIv-lqE56Kybts0sSfHL8U2cS9osn5rCvh9mxyMyDr2pg=w480-h960",
+                url: "https://play.google.com/store/apps/details?id=com.modern.tech.voice.changer.morflect",
+                description: "A creative voice changer, audio editor and effects toolkit for recordings, social content and sound experiments.",
+                tags: ["Voice effects", "Audio editor", "Android app"]
+            },
+            {
+                title: "Modern Shooting Games: Gun Game",
+                account: "TPS Shooter & Action Games",
+                category: "Action",
+                downloads: "500K+ downloads",
+                icon: "https://play-lh.googleusercontent.com/zWOa1Ee6AFmlGh0JMzM6YhQKz_3_jf7dKeM0BKV2PdtGhPrCefSRkTXd5fNftMGCTls=w480-h960",
+                url: "https://play.google.com/store/apps/details?id=com.sm.gaming.gunshootinggames.coverfire",
+                description: "An offline shooting experience with action missions, multiple weapons and varied combat environments.",
+                tags: ["Shooter", "Offline", "FPS"]
+            },
+            {
+                title: "Police Car Game: Parking Game",
+                account: "TPS Shooter & Action Games",
+                category: "Simulation",
+                downloads: "50K+ downloads",
+                icon: "https://play-lh.googleusercontent.com/OyF4dmrMCZNglFmgeoRZFtdB7LPwcaBKbSbFTUzgtpc-stjzn60tgEXWHKfsa15Y83G3wgoEUh9G2heGNb3eD3g=w480-h960",
+                url: "https://play.google.com/store/apps/details?id=com.vee.gaming.studio.policecarparkinggame",
+                description: "Police vehicle driving and parking challenges with multiple controls, environments and precision levels.",
+                tags: ["Police cars", "Parking", "Driving"]
+            },
+            {
+                title: "Strike Force Elite Gun Shooter",
+                account: "TPS Shooter & Action Games",
+                category: "Action",
+                downloads: "New release",
+                icon: "https://play-lh.googleusercontent.com/xB67DOaywMDtioGMeQsHCBRx19NLV5PTsJ1tmk-BpsI4JQDyk7UYfwg8V8OV3MaYxet7YyqwxMjGjO02MUHlN8I=w480-h960",
+                url: "https://play.google.com/store/apps/details?id=com.strike.force.elite.gun.shooter.multiplayer.game",
+                description: "A modern combat shooter built around fast gunplay, tactical movement and challenging strike missions.",
+                tags: ["Gun action", "Combat", "Mission based"]
+            },
+            {
+                title: "Animal Hunting - Shooting Games",
+                account: "CFG Studio",
+                category: "Action",
+                downloads: "1M+ downloads",
+                icon: "https://play-lh.googleusercontent.com/f4ZiurJhatqi2pr32AL8oRKUSI1ghbOFecG5_6e3ehPaxiqY5kWDVzK92Gy9XQONY39azxHTOybd0sMt6kU6=w480-h960",
+                url: "https://play.google.com/store/apps/details?id=com.classic.jungle.deer.hunters",
+                description: "A hunting and shooting game featuring wildlife targets, missions and varied outdoor environments.",
+                tags: ["Hunting", "Shooter", "Wildlife"]
+            },
+            {
+                title: "Mountain Climb 4x4 Car Games",
+                account: "CFG Studio",
+                category: "Simulation",
+                downloads: "5M+ downloads",
+                icon: "https://play-lh.googleusercontent.com/FZS3C_R2FAJVmZYDvu6qhCoCAx-ktjMVCk9hz8uAx-7BGYxPdK8UIJBymg475DU4MA=w480-h960",
+                url: "https://play.google.com/store/apps/details?id=com.classic.offroad.prado.suv.car.hummer.game",
+                description: "A large-scale off-road driving game featuring 4x4 vehicles, mountain routes and demanding terrain.",
+                tags: ["4x4", "Off-road", "Mountain driving"]
+            },
+            {
+                title: "Shop Keeper Simulator 3D",
+                account: "CFG Studio",
+                category: "Simulation",
+                downloads: "1K+ downloads",
+                icon: "https://play-lh.googleusercontent.com/NiAz2i2TQcJsG1GChNIQ042SJFPnODEP1O5lhjdKtsKSAqd4v_WdYeAu883sTZHtRBIjjL4CqDa8VNqBec9hKA=w480-h960",
+                url: "https://play.google.com/store/apps/details?id=com.cfgstudio.shop.keeper.simulator",
+                description: "Build a retail business by stocking shelves, managing inventory, serving customers and expanding the store.",
+                tags: ["Business", "Management", "3D simulator"]
+            },
+            {
+                title: "Taxi Games Driving Car Game 3D",
+                account: "CFG Studio",
+                category: "Simulation",
+                downloads: "1M+ downloads",
+                icon: "https://play-lh.googleusercontent.com/844ZwpAPuE9QLY6Rh-HOyPg-LtxerzHG-C03Y-dgQulVJVdCq5iFRMNJXxDz78D6O1IZxRSgk89ip4HAn1K8tQ=w480-h960",
+                url: "https://play.google.com/store/apps/details?id=com.classic.free.taxi.game",
+                description: "A city taxi-driving experience with passenger missions, traffic routes and urban driving challenges.",
+                tags: ["Taxi", "City driving", "Passenger missions"]
+            },
+            {
+                title: "Offroad Game Mountain Drive",
+                account: "CFG Studio",
+                category: "Simulation",
+                downloads: "1K+ downloads",
+                icon: "https://play-lh.googleusercontent.com/5kL4Wwyr1OV4wJ6jv86XRq8XmiC8zMjRmRGf6gWYR_lGZSkfZ8Lyh5VfteON6M-B6i6fWJQKlmd3_BSq2YwKiJo=w480-h960",
+                url: "https://play.google.com/store/apps/details?id=com.cfgstudio.offroad.prado.suv.car.hummer.game",
+                description: "An off-road vehicle adventure across elevated tracks, natural terrain and precision driving routes.",
+                tags: ["Off-road", "Jeep", "Obstacle tracks"]
+            },
+            {
+                title: "Car Race Speed Drift Challenge",
+                account: "CFG Studio",
+                category: "Racing",
+                downloads: "100K+ downloads",
+                icon: "https://play-lh.googleusercontent.com/rrSoRPPxSgD_A6E4dTbjZuZFQFg9Dzh3nlvmkFdbSxZm4Cs4e25_6hsH6vlSluZOVGNnqbQXcPC-8S010Rot=w480-h960",
+                url: "https://play.google.com/store/apps/details?id=com.classic.free.prado.car.stunts.game",
+                description: "Short, fast racing levels with drifting, ramps, sharp turns, vehicle unlocks and offline play.",
+                tags: ["Racing", "Drift", "Car upgrades"]
+            },
+            {
+                title: "Track Master Deadly Challenges",
+                account: "CFG Studio",
+                category: "Racing",
+                downloads: "1M+ downloads",
+                icon: "https://play-lh.googleusercontent.com/6UPyQztz7CZw_G_XJ7yTspoY1cAGYaE1iCCmC3iizBpbmRa5i01XoIpQM6PrEUCHMJK77_9lv7sK5Ue2zD4l_w=w480-h960",
+                url: "https://play.google.com/store/apps/details?id=com.classic.free.sky.runners.ultimate.smashers.game",
+                description: "A high-altitude driving challenge with dangerous tracks, stunts and precision vehicle control.",
+                tags: ["Sky tracks", "Stunts", "Driving challenge"]
+            },
+            {
+                title: "Arrio: Arrow Puzzle",
+                account: "Gaming Stock",
+                category: "Puzzle",
+                downloads: "New release",
+                icon: "https://play-lh.googleusercontent.com/LfWyCQCFtQqPaUIkRWjVIi8525LABgo2K8g6ecpoaANY_nplc9BA3pDfyOwpjspjOmBBX3ZlTMO6RrXFhoB0cw=w480-h960",
+                url: "https://play.google.com/store/apps/details?id=com.arrio.arrows.arrow.puzzle.game",
+                description: "A colorful directional puzzle built around arrows, planning, sequencing and satisfying board-clearing challenges.",
+                tags: ["Arrow puzzle", "Logic", "Casual"]
+            },
+            {
+                title: "Pink Taxi Driving Game 3D",
+                account: "Gaming Stock",
+                category: "Simulation",
+                downloads: "1M+ downloads",
+                icon: "https://play-lh.googleusercontent.com/eBgOtimpM8Yo7-kApoxmgxkDzMx_baRXwRaYNQroOlLO5ngnxao3Qw6Sh4gBZptFS4oVzLIehmCTPBPRvfml8g=w480-h960",
+                url: "https://play.google.com/store/apps/details?id=com.brnas.women.taxi.waxi",
+                description: "A distinctive pink taxi simulator featuring city routes, passenger pickups and colorful driving missions.",
+                tags: ["Pink taxi", "City", "Driving simulator"]
+            }
+        ];
+
         const siteHeader = document.getElementById("siteHeader");
         const menuButton = document.getElementById("menuButton");
         const navLinks = document.getElementById("navLinks");
         const backToTop = document.getElementById("backToTop");
         const currentYear = document.getElementById("currentYear");
+        const gamesGrid = document.getElementById("gamesGrid");
+        const gameSearch = document.getElementById("gameSearch");
+        const filterButtons = document.querySelectorAll(".filter-button");
+        const resultsLine = document.getElementById("resultsLine");
+        const emptyState = document.getElementById("emptyState");
         const navigationItems = document.querySelectorAll("#navLinks a");
-        const revealElements = document.querySelectorAll(".reveal");
+
+        let activeFilter = "all";
 
         currentYear.textContent = new Date().getFullYear();
+
+        function escapeHtml(value) {
+            return String(value)
+                .replaceAll("&", "&amp;")
+                .replaceAll("<", "&lt;")
+                .replaceAll(">", "&gt;")
+                .replaceAll('"', "&quot;")
+                .replaceAll("'", "&#039;");
+        }
+
+        function initials(title) {
+            return title
+                .split(/\s+/)
+                .filter(Boolean)
+                .slice(0, 2)
+                .map(word => word[0])
+                .join("")
+                .toUpperCase();
+        }
+
+        function renderGames(list) {
+            gamesGrid.innerHTML = list.map((game) => {
+                const tags = game.tags
+                    .map(tag => `<span class="tag">${escapeHtml(tag)}</span>`)
+                    .join("");
+
+                return `
+                    <article class="game-card reveal visible">
+                        <div class="game-visual">
+                            <span class="download-badge">${escapeHtml(game.downloads)}</span>
+                            <div class="game-icon-shell">
+                                <img
+                                    class="game-icon"
+                                    src="${escapeHtml(game.icon)}"
+                                    alt="${escapeHtml(game.title)} icon"
+                                    loading="lazy"
+                                    referrerpolicy="no-referrer"
+                                    onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';"
+                                >
+                                <span class="icon-fallback" aria-hidden="true">${escapeHtml(initials(game.title))}</span>
+                            </div>
+                        </div>
+
+                        <div class="game-content">
+                            <span class="game-account">${escapeHtml(game.account)}</span>
+                            <h3>${escapeHtml(game.title)}</h3>
+                            <p class="game-description">${escapeHtml(game.description)}</p>
+                            <div class="game-tags">${tags}</div>
+
+                            <div class="game-actions">
+                                <a
+                                    class="play-link"
+                                    href="${escapeHtml(game.url)}"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label="Open ${escapeHtml(game.title)} on Google Play"
+                                >
+                                    View on Google Play
+                                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                        <path d="M5 12H19M13 6L19 12L13 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </a>
+                                <span class="game-category">${escapeHtml(game.category)}</span>
+                            </div>
+                        </div>
+                    </article>
+                `;
+            }).join("");
+
+            resultsLine.textContent = `Showing ${list.length} ${list.length === 1 ? "release" : "releases"}`;
+            emptyState.classList.toggle("visible", list.length === 0);
+        }
+
+        function applyFilters() {
+            const query = gameSearch.value.trim().toLowerCase();
+
+            const filtered = games.filter((game) => {
+                const matchesAccount = activeFilter === "all" || game.account === activeFilter;
+                const searchable = [
+                    game.title,
+                    game.account,
+                    game.category,
+                    game.description,
+                    ...game.tags
+                ].join(" ").toLowerCase();
+
+                return matchesAccount && searchable.includes(query);
+            });
+
+            renderGames(filtered);
+        }
+
+        filterButtons.forEach((button) => {
+            button.addEventListener("click", () => {
+                activeFilter = button.dataset.filter;
+
+                filterButtons.forEach(item => item.classList.remove("active"));
+                button.classList.add("active");
+                applyFilters();
+            });
+        });
+
+        gameSearch.addEventListener("input", applyFilters);
 
         function closeNavigation() {
             navLinks.classList.remove("open");
             document.body.classList.remove("menu-open");
             menuButton.setAttribute("aria-expanded", "false");
             menuButton.setAttribute("aria-label", "Open navigation menu");
-
             menuButton.innerHTML = `
                 <svg viewBox="0 0 24 24" fill="none">
-                    <path
-                        d="M4 7H20M4 12H20M4 17H20"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                    />
+                    <path d="M4 7H20M4 12H20M4 17H20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                 </svg>
             `;
         }
@@ -1981,84 +2243,58 @@
             document.body.classList.add("menu-open");
             menuButton.setAttribute("aria-expanded", "true");
             menuButton.setAttribute("aria-label", "Close navigation menu");
-
             menuButton.innerHTML = `
                 <svg viewBox="0 0 24 24" fill="none">
-                    <path
-                        d="M6 6L18 18M18 6L6 18"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                    />
+                    <path d="M6 6L18 18M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                 </svg>
             `;
         }
 
         menuButton.addEventListener("click", () => {
-            const isOpen = navLinks.classList.contains("open");
-
-            if (isOpen) {
-                closeNavigation();
-            } else {
-                openNavigation();
-            }
+            navLinks.classList.contains("open") ? closeNavigation() : openNavigation();
         });
 
-        navigationItems.forEach((item) => {
-            item.addEventListener("click", closeNavigation);
-        });
+        navigationItems.forEach((item) => item.addEventListener("click", closeNavigation));
 
         window.addEventListener("resize", () => {
-            if (window.innerWidth > 760) {
+            if (window.innerWidth > 880) {
                 closeNavigation();
             }
         });
 
         function updateScrollState() {
             const scrollPosition = window.scrollY;
-
-            siteHeader.classList.toggle("scrolled", scrollPosition > 20);
-            backToTop.classList.toggle("visible", scrollPosition > 500);
+            siteHeader.classList.toggle("scrolled", scrollPosition > 18);
+            backToTop.classList.toggle("visible", scrollPosition > 520);
         }
 
-        window.addEventListener("scroll", updateScrollState, {
-            passive: true
-        });
-
+        window.addEventListener("scroll", updateScrollState, { passive: true });
         updateScrollState();
 
         backToTop.addEventListener("click", () => {
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            });
+            window.scrollTo({ top: 0, behavior: "smooth" });
         });
 
+        const revealElements = document.querySelectorAll(".reveal");
+
         if ("IntersectionObserver" in window) {
-            const revealObserver = new IntersectionObserver(
-                (entries, observer) => {
-                    entries.forEach((entry) => {
-                        if (!entry.isIntersecting) {
-                            return;
-                        }
+            const observer = new IntersectionObserver((entries, revealObserver) => {
+                entries.forEach((entry) => {
+                    if (!entry.isIntersecting) {
+                        return;
+                    }
 
-                        entry.target.classList.add("visible");
-                        observer.unobserve(entry.target);
-                    });
-                },
-                {
-                    threshold: 0.14
-                }
-            );
+                    entry.target.classList.add("visible");
+                    revealObserver.unobserve(entry.target);
+                });
+            }, { threshold: 0.12 });
 
-            revealElements.forEach((element) => {
-                revealObserver.observe(element);
-            });
+            revealElements.forEach(element => observer.observe(element));
         } else {
-            revealElements.forEach((element) => {
-                element.classList.add("visible");
-            });
+            revealElements.forEach(element => element.classList.add("visible"));
         }
+
+        renderGames(games);
     </script>
 </body>
 </html>
